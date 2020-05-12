@@ -12,4 +12,9 @@ RUN apt-get update \
     && apt-get install -y libpq-dev \
     && docker-php-ext-install pdo_mysql pdo_pgsql
 
+RUN curl -SL https://deb.nodesource.com/setup_13.x | bash
+RUN apt-get install -y nodejs && \
+    npm install -g npm@latest && \
+    npm install -g @vue/cli
+
 WORKDIR /var/www/html
