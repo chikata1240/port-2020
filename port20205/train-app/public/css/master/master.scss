@@ -1,0 +1,48 @@
+// 文字カラー
+$white-color: #fff;
+$black-color: #000;
+$gray-color: #ccc;
+$main-color: #636b6f;
+// 背景カラー
+$bg-main-color: #636b6f;
+
+@mixin nav($right:93px){
+    position: absolute;
+    z-index: 20;
+    right: $right;
+    top: 27px;
+}
+
+html, body {
+  background-color: $white-color;
+  color: $main-color;
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+  font-size:62.5%;
+  font-weight: 200;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+   // ヘッダー
+  .header{
+    background-color: $main-color;
+    color: $white-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 80px;
+  }
+  
+  .links > a {
+      color: $white-color;
+      padding: 0 13px;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: .1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+}
