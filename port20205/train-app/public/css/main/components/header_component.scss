@@ -1,18 +1,9 @@
-@import "../mixin/mixin.scss";
-@import "../color/color.scss";
+@import "../../mixin/mixin.scss";
+@import "../../color/color.scss";
 
 html, body {
-  background-color: $white-color;
-  color: $main-color;
-  position: relative;
-  font-family: 'Nunito', sans-serif;
-  font-size:62.5%;
-  font-weight: 200;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-
-   // ヘッダー
+  
+  // ヘッダー
   .header{
     background-color: $main-color;
     color: $white-color;
@@ -32,5 +23,12 @@ html, body {
       letter-spacing: .1rem;
       text-decoration: none;
       text-transform: uppercase;
+  }
+
+  .top-right {
+    @include nav(15px);
+    > a{
+        @include hover();
+    }
   }
 }

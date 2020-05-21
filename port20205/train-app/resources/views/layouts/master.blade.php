@@ -13,7 +13,6 @@
     <body>
         {{-- ヘッダー --}}
         <header>
-            <div class="header"></div>
             @yield('header')
         </header>
 

@@ -1,0 +1,59 @@
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+  font-size: 62.5%;
+  font-weight: 200;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+html .header, body .header {
+  background-color: #636b6f;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 80px;
+}
+
+html .links > a, body .links > a {
+  color: #fff;
+  padding: 0 13px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+html .user_main, body .user_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1300px;
+  padding: 200px 0 0 50px;
+}
+
+html .user_main .user_information, body .user_main .user_information {
+  background-color: #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 350px;
+  height: 100px;
+  margin-left: 0px;
+}
+
+html .user_main .user_contents, body .user_main .user_contents {
+  background-color: #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 900px;
+  height: 100px;
+  margin-left: 50px;
+}
+/*# sourceMappingURL=main.css.map */

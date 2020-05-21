@@ -1,0 +1,23 @@
+@mixin nav($right:93px){
+  position: absolute;
+  z-index: 20;
+  right: $right;
+  top: 27px;
+}
+
+@mixin hover {
+  &:hover{
+      color: $black-color;
+  }
+}
+
+@mixin sendhover {
+  &:hover{
+    cursor: pointer;
+    transition: all 0.1s linear;
+  }
+  &:active{
+    transform: translateY(4px);
+    border-bottom: 5px solid #ccc;
+  }
+}

@@ -1,0 +1,162 @@
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+  font-size: 62.5%;
+  font-weight: 200;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+html .header, body .header {
+  background-color: #636b6f;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 80px;
+}
+
+html .links > a, body .links > a {
+  color: #fff;
+  padding: 0 13px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+html .user_main, body .user_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1300px;
+  padding: 100px 0 0 50px;
+}
+
+html .user_main .user_information, body .user_main .user_information {
+  background-color: #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 350px;
+  height: 350px;
+  margin-top: 50px;
+  margin-left: 0px;
+}
+
+html .user_main .user_contents, body .user_main .user_contents {
+  background-color: #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 900px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+html .user_main .user_contents .training_menu, body .user_main .user_contents .training_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #999;
+  font-size: 3rem;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 40px;
+}
+
+html .user_main .user_contents .training_contents, body .user_main .user_contents .training_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+html .user_main .user_contents .training_contents .book_content, body .user_main .user_contents .training_contents .book_content {
+  background-color: #999;
+  width: 400px;
+  height: 480px;
+  margin-bottom: 70px;
+}
+
+html .user_main .user_contents .training_contents .book_content .content_header, body .user_main .user_contents .training_contents .book_content .content_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.5rem;
+  border-bottom: 2px solid #000;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+html .user_main .user_contents .training_contents .book_content form, body .user_main .user_contents .training_contents .book_content form {
+  width: 90%;
+  margin: auto;
+}
+
+html .user_main .user_contents .training_contents .book_content form > p, body .user_main .user_contents .training_contents .book_content form > p {
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+}
+
+html .user_main .user_contents .training_contents .book_content form > input, body .user_main .user_contents .training_contents .book_content form > input {
+  width: 300px;
+  height: 30px;
+  margin-left: 15px;
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+}
+
+html .user_main .user_contents .training_contents .book_content form .content_submit, body .user_main .user_contents .training_contents .book_content form .content_submit {
+  width: 90%;
+  margin: 50px auto;
+}
+
+html .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button, body .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button {
+  border-style: none;
+  border-bottom: 10px solid #ccc;
+  border-radius: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.12), 0 3px 4px 0 rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.12), 0 3px 4px 0 rgba(0, 0, 0, 0.22);
+  width: 100%;
+  height: 65px;
+}
+
+html .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button:hover, body .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+html .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button:active, body .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  border-bottom: 5px solid #ccc;
+}
+
+html .user_main .user_contents .training_contents .training_content, body .user_main .user_contents .training_contents .training_content {
+  background-color: #999;
+  width: 400px;
+  height: 500px;
+}
+/*# sourceMappingURL=input.css.map */

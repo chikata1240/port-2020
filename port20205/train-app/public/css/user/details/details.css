@@ -1,0 +1,138 @@
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+  font-size: 62.5%;
+  font-weight: 200;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+html .header, body .header {
+  background-color: #636b6f;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 80px;
+}
+
+html .links > a, body .links > a {
+  color: #fff;
+  padding: 0 13px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+html .user_main, body .user_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1300px;
+  padding: 150px 0 0 50px;
+}
+
+html .user_main .user_information, body .user_main .user_information {
+  background-color: #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 350px;
+  height: 350px;
+  margin-left: 0px;
+}
+
+html .user_main .user_contents, body .user_main .user_contents {
+  background-color: #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 900px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+html .user_main .user_contents .detail_content_title, body .user_main .user_contents .detail_content_title {
+  background-color: #999;
+  width: 100%;
+  margin: 0 auto 50px;
+}
+
+html .user_main .user_contents .detail_content_title .detail_content_title_header, body .user_main .user_contents .detail_content_title .detail_content_title_header {
+  background-color: #777;
+  width: 100%;
+  height: 60px;
+}
+
+html .user_main .user_contents .detail_content_title .detail_content_title_parts, body .user_main .user_contents .detail_content_title .detail_content_title_parts {
+  width: 80%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_title, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_title {
+  font-size: 2rem;
+}
+
+html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_record, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_record {
+  font-size: 2.5rem;
+  padding-left: 20px;
+}
+
+html .user_main .user_contents .detail_content_progress, body .user_main .user_contents .detail_content_progress {
+  background-color: #999;
+  width: 80%;
+  margin: 0 auto 30px;
+  padding-bottom: 20px;
+}
+
+html .user_main .user_contents .detail_content_progress .detail_content_progress_header, body .user_main .user_contents .detail_content_progress .detail_content_progress_header {
+  background-color: #777;
+  width: 100%;
+  height: 60px;
+}
+
+html .user_main .user_contents .detail_content_progress .detail_content_progress_parts, body .user_main .user_contents .detail_content_progress .detail_content_progress_parts {
+  width: 80%;
+  margin: auto;
+}
+
+html .user_main .user_contents .detail_content_progress .detail_content_progress_parts .detail_content_progress_parts_title, body .user_main .user_contents .detail_content_progress .detail_content_progress_parts .detail_content_progress_parts_title {
+  font-size: 2rem;
+}
+
+html .user_main .user_contents .detail_content_progress .detail_content_progress_parts .detail_content_progress_parts_record, body .user_main .user_contents .detail_content_progress .detail_content_progress_parts .detail_content_progress_parts_record {
+  font-size: 2.5rem;
+  padding-left: 20px;
+}
+
+html .user_main .user_contents .detail_pagenation, body .user_main .user_contents .detail_pagenation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #777;
+  width: 100%;
+  height: 50px;
+}
+
+html .user_main .user_contents .detail_pagenation .detail_pagenation_parts, body .user_main .user_contents .detail_pagenation .detail_pagenation_parts {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+html .user_main .user_contents .detail_pagenation .detail_pagenation_parts > a, body .user_main .user_contents .detail_pagenation .detail_pagenation_parts > a {
+  text-decoration: none;
+  color: #000;
+}
+/*# sourceMappingURL=details.css.map */

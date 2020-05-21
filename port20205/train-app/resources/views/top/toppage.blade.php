@@ -5,6 +5,7 @@
 @endsection
 
 @section('header')
+    <div class="header"></div>  
     @if (Route::has('login'))
     <div class="top-right links">
         @auth
