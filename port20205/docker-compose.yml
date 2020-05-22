@@ -29,5 +29,6 @@ services:
       - "3306:3306"
     volumes:
       - mysql-data:/var/lib/mysql
+      - ./tmp/custom.cnf:/etc/mysql/conf.d/my.cnf
 volumes:
   mysql-data:
