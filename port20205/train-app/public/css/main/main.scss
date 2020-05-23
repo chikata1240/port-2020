@@ -10,15 +10,47 @@ html, body {
             background-color: #ccc;
             box-sizing: border-box;
             width: 350px;
-            height: 100px;
+            height: 350px;
             margin-left: 0px;
         }
         .user_contents{
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
             background-color: #ccc;
             box-sizing: border-box;
             width: 900px;
-            height: 100px;
             margin-left: 50px;
+            margin-bottom: 50px;
+
+            .main_content_title{
+                background-color: #999;
+                width: 250px;
+                height: 250px;
+                margin-left: 37px;
+                margin-bottom: 50px;
+
+                .main_content_title_header{
+                    background-color: #777;
+                    width: 100%;
+                    height: 60px;
+                }
+
+                .main_content_title_parts{
+                    width: 80%;
+                    margin: auto;
+                    padding: 30px 0;
+
+                    .main_content_title_parts_title{
+                        font-size: 2rem;
+                    }
+                    .main_content_title_parts_record{
+                        font-size: 1.5rem;
+                        padding-left: 20px;
+                        padding-bottom: 5px;
+                    }
+                }
+            }
         }
     }
 }

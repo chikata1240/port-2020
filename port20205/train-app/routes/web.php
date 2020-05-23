@@ -25,6 +25,8 @@ Route::get('/input', function () {
 Route::get('/details', function () {
     return view('user.details');
 });
+Route::get('/user_edit', 'HomeController@user_edit_get');
+Route::post('/user_edit', 'HomeController@user_edit_post');
 // Route::get('/main', function () {
 //     return view('user.main');
 // });

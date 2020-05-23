@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function plans(){
         return $this->hasMany("App\Plan");
     }
+
+    public function results(){
+        return $this->hasMany("App\Result");
+    }
 }
