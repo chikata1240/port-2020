@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('stylesheet')
-    <link rel="stylesheet" href="css/main/components/header_component.css">
+    <link rel="stylesheet" href="css/user/components/header_component.css">
     <link rel="stylesheet" href="css/user/user_edit/user_edit.css">
 @endsection
 
@@ -21,14 +21,30 @@
   <div class="user_main">
     {{-- ユーザー情報 --}}
     <div class="user_information">
+      @foreach ($user_information as $information)
+      {{-- 画像 --}}
+      <div class="user_image">
+        <img src="{{asset('/storage/img/'. $information->file_name)}}" alt="">
+      </div>
+      {{-- 名前 --}}
+      <div class="user_name">
+        <div>Name</div>
+        <div>{{$information->name}}</div>
+        <div>Arrival</div>
+        <div>0</div>
+      </div>
+      @endforeach
     </div>
+
     {{-- コンテンツ --}}
     <div class="user_contents">
       <div class="user_edit_content_title_header"></div>
       <div class="user_edit_content_title_parts">
         {{-- 画像 --}}
         <div class="user_edit_content_title_parts_image">
-          <img src="{{asset('/storage/img/'.$file_name)}}" alt="">
+          @foreach ($user_information as $information)
+            <img src="{{asset('/storage/img/'. $information->file_name)}}" alt="">
+          @endforeach
         </div>
         {{-- フォーム --}}
         <div class="user_edit_content_title_parts_form">

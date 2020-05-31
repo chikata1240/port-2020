@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('stylesheet')
-    <link rel="stylesheet" href="css/main/components/header_component.css">
+    <link rel="stylesheet" href="css/user/components/header_component.css">
     <link rel="stylesheet" href="css/user/input/input.css">
 @endsection
 

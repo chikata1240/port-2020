@@ -5,19 +5,45 @@ html, body {
     .user_main{
         display: flex;
         width: 1300px;
-        padding: 200px 0 0 50px;
+        padding: 150px 0 0 100px;
         .user_information{
             background-color: #ccc;
             box-sizing: border-box;
             width: 350px;
-            height: 350px;
+            height: 370px;
             margin-left: 0px;
+            .user_image{
+              width: 200px;
+              height: 200px;
+              margin: 20px auto 0;
+              > img{
+                  width: 200px;
+                  height: 200px;
+              }
+          }
+          .user_name{
+              font-size: 1.7rem;
+              width: 200px;
+              height: 120px;
+              margin: auto;
+              padding-top: 10px;
+              > div{
+                  padding-bottom: 5px;
+                  &:nth-child(odd){
+                      font-weight: 600;
+                      padding-left: 10px;
+                  }
+                  &:nth-child(even){
+                      padding-left: 30px;
+                  }
+              }
+          }
         }
         .user_contents{
             background-color: #ccc;
             box-sizing: border-box;
             width: 900px;
-            margin-left: 50px;
+            margin-left: 100px;
             margin-bottom: 50px;
 
             .user_edit_content_title_header{

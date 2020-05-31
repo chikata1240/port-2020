@@ -1,0 +1,115 @@
+@import "../../master/master.scss";
+
+html, body {
+  // コンテンツ
+  .user_main{
+    display: flex;
+    width: 1300px;
+    padding: 150px 0 0 100px;
+    .user_information{
+        background-color: #ccc;
+        box-sizing: border-box;
+        width: 250px;
+        height: 370px;
+        margin-left: 0px;
+        .user_image{
+          width: 200px;
+          height: 200px;
+          margin: 20px auto 0;
+          > img{
+              width: 200px;
+              height: 200px;
+          }
+      }
+      .user_name{
+          font-size: 1.7rem;
+          width: 200px;
+          height: 120px;
+          margin: auto;
+          padding-top: 10px;
+          > div{
+              padding-bottom: 5px;
+              &:nth-child(odd){
+                font-weight: 600;
+                padding-left: 10px;
+              }
+              &:nth-child(even){
+                padding-left: 30px;
+              }
+          }
+      }
+    }
+    .user_contents{
+      background-color: #ccc;
+      box-sizing: border-box;
+      width: 900px;
+      margin-left: 100px;
+      margin-bottom: 100px;
+
+      .archive_content_title_header{
+        background-color: #666;
+        width: 100%;
+        height: 60px;
+      }
+
+      .archive_content{
+        display: flex;
+        justify-content: center;
+        background-color: #999;
+        width: 100%;
+        height: 450px;
+
+        .archive_message{
+          position: relative;
+          background-color: #999;
+          width: 50%;
+          height: 450px;
+          > div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            font-size: 3.5rem;
+            line-height: 0.8;
+            width: 100%;
+          }
+        }
+        
+        .archive_content_title_parts{
+          width: 40%;
+          margin: auto;
+          > form{
+            width: 100%;
+            > p{
+              font-size: 1.7rem;
+              margin-top: 0;
+              margin-bottom: 5px;
+              padding-top: 15px;
+            }
+            > input{
+              box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22);
+              width:320px;
+              height: 30px;
+              margin-left: 15px;
+            }
+            .content_submit{
+              width: 350px;
+              margin: 50px auto;
+              .content_submit_button{
+                border-style: none;
+                border-bottom: 10px solid #ccc;
+                border-radius: 15px;
+                background-color: #fff;
+                box-shadow: 0 0 5px 0 rgba(0,0,0,.12), 0 3px 4px 0 rgba(0,0,0,.22);
+                width: 100%;
+                height: 65px;
+                @include sendhover();
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

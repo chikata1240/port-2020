@@ -36,16 +36,48 @@ html .user_main, body .user_main {
   display: -ms-flexbox;
   display: flex;
   width: 1300px;
-  padding: 150px 0 0 50px;
+  padding: 150px 0 0 100px;
 }
 
 html .user_main .user_information, body .user_main .user_information {
   background-color: #ccc;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 370px;
   margin-left: 0px;
+}
+
+html .user_main .user_information .user_image, body .user_main .user_information .user_image {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto 0;
+}
+
+html .user_main .user_information .user_image > img, body .user_main .user_information .user_image > img {
+  width: 200px;
+  height: 200px;
+}
+
+html .user_main .user_information .user_name, body .user_main .user_information .user_name {
+  font-size: 1.7rem;
+  width: 200px;
+  height: 120px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+html .user_main .user_information .user_name > div, body .user_main .user_information .user_name > div {
+  padding-bottom: 5px;
+}
+
+html .user_main .user_information .user_name > div:nth-child(odd), body .user_main .user_information .user_name > div:nth-child(odd) {
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+html .user_main .user_information .user_name > div:nth-child(even), body .user_main .user_information .user_name > div:nth-child(even) {
+  padding-left: 30px;
 }
 
 html .user_main .user_contents, body .user_main .user_contents {
@@ -53,7 +85,7 @@ html .user_main .user_contents, body .user_main .user_contents {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 900px;
-  margin-left: 50px;
+  margin-left: 100px;
   margin-bottom: 100px;
 }
 
@@ -70,18 +102,55 @@ html .user_main .user_contents .detail_content_title .detail_content_title_heade
 }
 
 html .user_main .user_contents .detail_content_title .detail_content_title_parts, body .user_main .user_contents .detail_content_title .detail_content_title_parts {
-  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
   margin: auto;
   padding: 30px 0;
 }
 
-html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_title, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_title {
+html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal {
+  width: 70%;
+}
+
+html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal .detail_content_title_parts_title, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal .detail_content_title_parts_title {
   font-size: 2rem;
 }
 
-html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_record, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_record {
+html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal .detail_content_title_parts_record, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal .detail_content_title_parts_record {
   font-size: 2.5rem;
   padding-left: 20px;
+}
+
+html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe {
+  background-color: #444;
+  width: 20%;
+  height: 180px;
+}
+
+html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe > a, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe > a {
+  text-decoration: none;
+  color: #000;
+}
+
+html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe > a .detail_content_title_parts_archibe_link, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe > a .detail_content_title_parts_archibe_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
 }
 
 html .user_main .user_contents .detail_content_progress, body .user_main .user_contents .detail_content_progress {

@@ -36,7 +36,7 @@ html .user_main, body .user_main {
   display: -ms-flexbox;
   display: flex;
   width: 1300px;
-  padding: 100px 0 0 50px;
+  padding: 150px 0 0 100px;
 }
 
 html .user_main .user_information, body .user_main .user_information {
@@ -44,9 +44,40 @@ html .user_main .user_information, body .user_main .user_information {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 350px;
-  height: 350px;
-  margin-top: 50px;
+  height: 370px;
   margin-left: 0px;
+}
+
+html .user_main .user_information .user_image, body .user_main .user_information .user_image {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto 0;
+}
+
+html .user_main .user_information .user_image > img, body .user_main .user_information .user_image > img {
+  width: 200px;
+  height: 200px;
+}
+
+html .user_main .user_information .user_name, body .user_main .user_information .user_name {
+  font-size: 1.7rem;
+  width: 200px;
+  height: 120px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+html .user_main .user_information .user_name > div, body .user_main .user_information .user_name > div {
+  padding-bottom: 5px;
+}
+
+html .user_main .user_information .user_name > div:nth-child(odd), body .user_main .user_information .user_name > div:nth-child(odd) {
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+html .user_main .user_information .user_name > div:nth-child(even), body .user_main .user_information .user_name > div:nth-child(even) {
+  padding-left: 30px;
 }
 
 html .user_main .user_contents, body .user_main .user_contents {
@@ -54,7 +85,7 @@ html .user_main .user_contents, body .user_main .user_contents {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 900px;
-  margin-left: 50px;
+  margin-left: 100px;
   margin-bottom: 100px;
 }
 
@@ -119,7 +150,7 @@ html .user_main .user_contents .training_contents .book_content form > p, body .
 }
 
 html .user_main .user_contents .training_contents .book_content form > input, body .user_main .user_contents .training_contents .book_content form > input {
-  width: 300px;
+  width: 320px;
   height: 30px;
   margin-left: 15px;
   -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
