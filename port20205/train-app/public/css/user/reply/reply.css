@@ -1,0 +1,306 @@
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+  font-size: 62.5%;
+  font-weight: 200;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+html .header, body .header {
+  background-color: #636b6f;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 80px;
+}
+
+html .links > a, body .links > a {
+  color: #fff;
+  padding: 0 13px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+html .user_main, body .user_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1300px;
+  padding: 150px 0 0 100px;
+}
+
+html .user_main .user_information, body .user_main .user_information {
+  background-color: #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 250px;
+  height: 370px;
+  margin-left: 0px;
+}
+
+html .user_main .user_information .user_image, body .user_main .user_information .user_image {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto 0;
+}
+
+html .user_main .user_information .user_image > img, body .user_main .user_information .user_image > img {
+  width: 200px;
+  height: 200px;
+}
+
+html .user_main .user_information .user_name, body .user_main .user_information .user_name {
+  font-size: 1.7rem;
+  width: 200px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+html .user_main .user_information .user_name > div, body .user_main .user_information .user_name > div {
+  padding-bottom: 5px;
+}
+
+html .user_main .user_information .user_name > div:nth-child(odd), body .user_main .user_information .user_name > div:nth-child(odd) {
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+html .user_main .user_information .user_name > div:nth-child(even), body .user_main .user_information .user_name > div:nth-child(even) {
+  padding-left: 30px;
+}
+
+html .user_main .user_contents, body .user_main .user_contents {
+  background-color: #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 900px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+html .user_main .user_contents .main_content_title, body .user_main .user_contents .main_content_title {
+  width: 100%;
+}
+
+html .user_main .user_contents .main_content_title .main_content_title_header, body .user_main .user_contents .main_content_title .main_content_title_header {
+  background-color: #333;
+  width: 100%;
+  height: 50px;
+}
+
+html .user_main .user_contents .main_content_title .main_content_title_header .main_content_title_header_day, body .user_main .user_contents .main_content_title .main_content_title_header .main_content_title_header_day {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-left: 2px solid #fff;
+  line-height: 50px;
+  font-size: 1.7rem;
+  margin-left: 30px;
+  padding-left: 15px;
+}
+
+html .user_main .user_contents .main_content_title .detail_content_title_parts_box, body .user_main .user_contents .main_content_title .detail_content_title_parts_box {
+  width: 100%;
+}
+
+html .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts, body .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts {
+  background-color: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 20px 0;
+}
+
+html .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts .detail_content_title_parts_image, body .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts .detail_content_title_parts_image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #888;
+  width: 20%;
+}
+
+html .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts .detail_content_title_parts_image > img, body .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts .detail_content_title_parts_image > img {
+  width: 80%;
+}
+
+html .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts .detail_content_title_parts_text, body .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts .detail_content_title_parts_text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #999;
+  width: 80%;
+  padding: 0 30px;
+}
+
+html .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts .detail_content_title_parts_text .detail_content_title_parts_text_title, body .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts .detail_content_title_parts_text .detail_content_title_parts_text_title {
+  font-size: 2rem;
+}
+
+html .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts .detail_content_title_parts_text .detail_content_title_parts_text_recode, body .user_main .user_contents .main_content_title .detail_content_title_parts_box .detail_content_title_parts .detail_content_title_parts_text .detail_content_title_parts_text_recode {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.5rem;
+  padding-left: 15px;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_form, body .user_main .user_contents .main_content_title .reply_content_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #515;
+  width: 100%;
+  height: 50px;
+  padding-left: 50px;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_form .reply_form_text, body .user_main .user_contents .main_content_title .reply_content_form .reply_form_text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 300px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+html .user_main .user_contents .main_content_title .reply_design_box, body .user_main .user_contents .main_content_title .reply_design_box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #aaa;
+  width: 100%;
+  height: 35px;
+  padding: 10px 0;
+}
+
+html .user_main .user_contents .main_content_title .reply_design_box .reply_design, body .user_main .user_contents .main_content_title .reply_design_box .reply_design {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right: 1px dashed #000;
+  width: 50%;
+  height: 100%;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_text, body .user_main .user_contents .main_content_title .reply_content_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #666;
+  width: 100%;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_image, body .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 18%;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_image > img, body .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_image > img {
+  width: 80%;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main, body .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #999;
+  width: 77%;
+  padding: 0 30px;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main .reply_content_text_main_user, body .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main .reply_content_text_main_user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #000;
+  background-color: #aaa;
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main .reply_content_text_main_user .reply_content_text_main_user_name, body .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main .reply_content_text_main_user .reply_content_text_main_user_name {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main .reply_content_text_main_user .reply_content_text_main_user_day, body .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main .reply_content_text_main_user .reply_content_text_main_user_day {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding-right: 20px;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main .reply_content_text_main_message, body .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main .reply_content_text_main_message {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 15px 0 0 20px;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main_delete_box, body .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main_delete_box {
+  width: 5%;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main_delete_box > a .reply_content_text_main_delete, body .user_main .user_contents .main_content_title .reply_content_text .reply_content_text_main_delete_box > a .reply_content_text_main_delete {
+  background-color: #222;
+  width: 100%;
+  height: 100%;
+}
+
+html .user_main .user_contents .main_content_title .reply_content_pagenation, body .user_main .user_contents .main_content_title .reply_content_pagenation {
+  background-color: #888;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  margin-top: 40px;
+}
+/*# sourceMappingURL=reply.css.map */

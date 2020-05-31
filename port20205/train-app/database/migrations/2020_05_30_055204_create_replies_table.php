@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateResultsTable extends Migration
+class CreateRepliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateResultsTable extends Migration
      */
     public function up()
     {
-        Schema::create('results', function (Blueprint $table) {
-            $table->increments('result_id');
-            $table->string('file_name')->nullable();
-            $table->integer('result')->nullable()->default('0');;
+        Schema::create('replies', function (Blueprint $table) {
+            $table->increments('reply_id');
+            $table->text('comment');
+            $table->integer('progress_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateResultsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('results');
+        Schema::dropIfExists('replies');
     }
 }
