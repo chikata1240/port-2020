@@ -10,25 +10,47 @@ html, body {
   margin: 0;
 }
 
-html .header, body .header {
-  background-color: #636b6f;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 80px;
+html .user_main, body .user_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1300px;
+  margin: auto;
 }
 
-html .links > a, body .links > a {
-  color: #fff;
-  padding: 0 13px;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: .1rem;
-  text-decoration: none;
-  text-transform: uppercase;
+html .user_main .user_information, body .user_main .user_information {
+  width: 250px;
+}
+
+html .user_main .user_information .composer_box, body .user_main .user_information .composer_box {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+}
+
+html .user_main .user_information .composer_visible, body .user_main .user_information .composer_visible {
+  visibility: visible;
+  -webkit-animation-duration: .1s;
+          animation-duration: .1s;
+  -webkit-animation-name: slide-in;
+          animation-name: slide-in;
+}
+
+html .user_main .user_information .composer_hidden, body .user_main .user_information .composer_hidden {
+  visibility: hidden;
+  -webkit-animation-duration: .1s;
+          animation-duration: .1s;
+  -webkit-animation-name: slide-out;
+          animation-name: slide-out;
+}
+
+html #app .navbar .container .navbar-brand, body #app .navbar .container .navbar-brand {
+  font-size: 3.2rem;
 }
 
 @media screen and (max-width: 576px) {
