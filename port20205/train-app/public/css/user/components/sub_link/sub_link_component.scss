@@ -1,0 +1,21 @@
+@import "../../../mixin/mixin.scss";
+@import "../../../color/color.scss";
+
+html body .user_information .composer_box .sub_link_box{
+  width: 50%;
+  > a{
+    text-decoration: none;
+    color: #000;
+    .sub_link{
+      box-sizing: border-box;
+      background-color: #999;
+      border: 1px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      width: 100%;
+      height: 50px;
+    }
+  }
+}
