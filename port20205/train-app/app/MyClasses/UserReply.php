@@ -26,6 +26,4 @@
       $this->reply_delete = Reply::destroy($request);
       return $this->reply_delete;
     }
-
-
   }
