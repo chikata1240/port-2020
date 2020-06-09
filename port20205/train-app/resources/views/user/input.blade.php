@@ -1,27 +1,32 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('stylesheet')
-    <link rel="stylesheet" href="css/user/components/header_component.css">
+    <link rel="stylesheet" href="css/user/components/user_information/user_information_component.css">
+    <link rel="stylesheet" href="css/user/components/sub_link/sub_link_component.css">
+    <link rel="stylesheet" href="css/user/components/slide/slide_component.css">
     <link rel="stylesheet" href="css/user/input/input.css">
-@endsection
-
-@section('header')
-    @component('components.header')
-        @slot('nav_content1')
-          設定変更
-        @endslot
-
-        @slot('nav_content2')
-          Myページ
-        @endslot
-    @endcomponent
 @endsection
 
 @section('content')
   <div class="user_main">
     {{-- ユーザー情報 --}}
     <div class="user_information">
-      
+      <x-user-information :user-information="$user_information" />
+      <x-slide />
+      <div id="composer" class="composer_box">
+        <x-sub-links sub-links="home">
+          Home
+        </x-sub-links>
+        <x-sub-links sub-links="user">
+          User
+        </x-sub-links>
+        <x-sub-links sub-links="user_edit">
+          ImageChange
+        </x-sub-links>
+        <x-sub-links sub-links="input">
+          Input
+        </x-sub-links>
+      </div>
     </div>
 
     {{-- コンテンツ --}}
@@ -29,30 +34,57 @@
       <div class="training_menu">Please choosing</div>
       <div class="training_contents">
         {{-- 読書 --}}
-        <div class="book_content">
-          <div class="content_header">Reeding Books</div>
-          <form action="" method="post">
+        <div class="training_content">
+          <div class="training_content_header">Reeding Books</div>
+          <form action="/input_book" method="post">
+            @csrf
+            <input type="hidden" name="type" value="book">
             <p>1.What is the title?</p>
-            <input type="text" name="content">
+            <input type="text" name="content" value="{{old('content')}}">
+            @error('content')
+              <span>{{$message}}</span>
+            @enderror
             <p>2.How long is the time limit?</p>
-            <input type="text" name="limit">
+            <input id="year" type="text" name="year" placeholder="XXXX" value="{{old('year')}}">
+            <label for="year">年</label>
+            <input id="month" type="text" name="month" placeholder="XX" value="{{old('month')}}">
+            <label for="month">月</label>
+            <input id="day" type="text" name="day" placeholder="XX" value="{{old('day')}}">
+            <label for="day">日</label>
+            @error('limit')
+              <span>{{$message}}</span>
+            @enderror
             <p>3.How many pages?</p>
-            <input type="text" name="rule">
+            <input type="text" name="rule" value="{{old('rule')}}">
+            @error('rule')
+              <span>{{$message}}</span>
+            @enderror
             <div class="content_submit">
               <input class="content_submit_button" type="submit" value="" >
             </div>
           </form>
         </div>
         {{-- トレーニング --}}
-        <div class="book_content">
-          <div class="content_header">Start Training</div>
-          <form action="" method="post">
+        <div class="training_content">
+          <div class="training_content_header">Start Training</div>
+          <form action="/input_training" method="post">
+            @csrf
+            <input type="hidden" name="type" value="training">
             <p>1.What are you doing?</p>
             <input type="text" name="content">
+            @error('content')
+              <span>{{$message}}</span>
+            @enderror
             <p>2.What is your goal?</p>
             <input type="text" name="limit">
+            @error('limit')
+              <span>{{$message}}</span>
+            @enderror
             <p>3.Let's decide the rules!</p>
             <input type="textarea" name="rule">
+            @error('rule')
+              <span>{{$message}}</span>
+            @enderror
             <div class="content_submit">
               <input class="content_submit_button" type="submit" value="">
             </div>

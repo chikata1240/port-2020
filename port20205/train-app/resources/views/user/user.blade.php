@@ -1,39 +1,32 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('stylesheet')
-    <link rel="stylesheet" href="css/user/components/header_component.css">
+    <link rel="stylesheet" href="css/user/components/user_information/user_information_component.css">
+    <link rel="stylesheet" href="css/user/components/sub_link/sub_link_component.css">
+    <link rel="stylesheet" href="css/user/components/slide/slide_component.css">
     <link rel="stylesheet" href="css/user/user/user.css">
-@endsection
-
-@section('header')
-    @component('components.header')
-        @slot('nav_content1')
-        設定変更
-        @endslot
-
-        @slot('nav_content2')
-          ログアウト
-        @endslot
-    @endcomponent
 @endsection
 
 @section('content')
   <div class="user_main">
     {{-- ユーザー情報 --}}
     <div class="user_information">
-      @foreach ($user_information as $information)
-      {{-- 画像 --}}
-      <div class="user_image">
-        <img src="{{asset('/storage/img/'.$information->file_name)}}" alt="">
+      <x-user-information :user-information="$user_information" />
+      <x-slide />
+      <div id="composer" class="composer_box">
+        <x-sub-links sub-links="home">
+          Home
+        </x-sub-links>
+        <x-sub-links sub-links="user">
+          User
+        </x-sub-links>
+        <x-sub-links sub-links="user_edit">
+          ImageChange
+        </x-sub-links>
+        <x-sub-links sub-links="input">
+          Input
+        </x-sub-links>
       </div>
-      {{-- 名前 --}}
-      <div class="user_name">
-        <div>Name</div>
-        <div>{{$information->name}}</div>
-        <div>Arrival</div>
-        <div>0</div>
-      </div>
-      @endforeach
     </div>
 
     {{-- コンテンツ box--}}
@@ -73,77 +66,5 @@
         </div>
       @endif
       @endforeach
-      <div class="user_content_title">
-        <div class="user_content_title_header"></div>
-        <a href="">
-          <div class="user_content_title_parts">
-            <div class="user_content_title_parts_title">Title</div>
-            <div class="user_content_title_parts_record">PHPフレームワーク Laravel 入門</div>
-            <div class="user_content_title_parts_title">Time Limit</div>
-            <div class="user_content_title_parts_record">21日</div>
-          </div>
-        </a>
-      </div>
-
-      <div class="user_content_title">
-        <div class="user_content_title_header"></div>
-        <a href="">
-          <div class="user_content_title_parts">
-            <div class="user_content_title_parts_title">Title</div>
-            <div class="user_content_title_parts_record">PHPフレームワーク Laravel 入門</div>
-            <div class="user_content_title_parts_title">Time Limit</div>
-            <div class="user_content_title_parts_record">21日</div>
-          </div>
-        </a>
-      </div>
-
-      <div class="user_content_title">
-        <div class="user_content_title_header"></div>
-        <a href="">
-          <div class="user_content_title_parts">
-            <div class="user_content_title_parts_title">Title</div>
-            <div class="user_content_title_parts_record">PHPフレームワーク Laravel 入門</div>
-            <div class="user_content_title_parts_title">Time Limit</div>
-            <div class="user_content_title_parts_record">21日</div>
-          </div>
-        </a>
-      </div>
-      
-      <div class="user_content_title">
-        <div class="user_content_title_header"></div>
-        <a href="">
-          <div class="user_content_title_parts">
-            <div class="user_content_title_parts_title">Title</div>
-            <div class="user_content_title_parts_record">PHPフレームワーク Laravel 入門</div>
-            <div class="user_content_title_parts_title">Time Limit</div>
-            <div class="user_content_title_parts_record">21日</div>
-          </div>
-        </a>
-      </div>
-
-      <div class="user_content_title">
-        <div class="user_content_title_header"></div>
-        <a href="">
-          <div class="user_content_title_parts">
-            <div class="user_content_title_parts_title">Title</div>
-            <div class="user_content_title_parts_record">PHPフレームワーク Laravel 入門</div>
-            <div class="user_content_title_parts_title">Time Limit</div>
-            <div class="user_content_title_parts_record">21日</div>
-          </div>
-        </a>
-      </div>
-
-      <div class="user_content_title">
-        <div class="user_content_title_header"></div>
-        <a href="">
-          <div class="user_content_title_parts">
-            <div class="user_content_title_parts_title">Title</div>
-            <div class="user_content_title_parts_record">PHPフレームワーク Laravel 入門</div>
-            <div class="user_content_title_parts_title">Time Limit</div>
-            <div class="user_content_title_parts_record">21日</div>
-          </div>
-        </a>
-      </div>
     </div>
-  </div>
 @endsection
