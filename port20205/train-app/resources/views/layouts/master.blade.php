@@ -23,4 +23,5 @@
         <footer>
             @include('include.footer-file')
         </footer>
+
     </body>
