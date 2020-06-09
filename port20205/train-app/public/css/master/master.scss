@@ -11,26 +11,34 @@ html, body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-
-   // ヘッダー
-  .header{
-    background-color: $main-color;
-    color: $white-color;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 80px;
+  .user_main{
+    display: flex;
+    width: 1300px;
+    margin: auto;
+    // ユーザー情報
+    .user_information{
+      width: 250px;
+      .composer_box{
+        visibility: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+      }
+      .composer_visible{
+        visibility:visible;
+        animation-duration: .1s;
+        animation-name: slide-in;
+      }
+      .composer_hidden{
+        visibility:hidden;
+        animation-duration: .1s;
+        animation-name: slide-out;
+      }
+    }
   }
-  
-  .links > a {
-      color: $white-color;
-      padding: 0 13px;
-      font-size: 1.8rem;
-      font-weight: 600;
-      letter-spacing: .1rem;
-      text-decoration: none;
-      text-transform: uppercase;
+  // ヘッダータイトル/フォントサイズ
+  #app .navbar .container .navbar-brand{
+    font-size: 3.2rem;
   }
 }
