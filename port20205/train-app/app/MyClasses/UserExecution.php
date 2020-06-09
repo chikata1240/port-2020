@@ -10,6 +10,8 @@
     protected $sum_pages;
     protected $remaining_pages;
     protected $archives;
+    protected $set_day;
+    protected $archive_delete;
 
     public function __construct($content_id)
     {
@@ -31,5 +33,21 @@
     public function archives(){
       $this->archives = $this->execution->orderBy('day','desc')->get();
       return $this->archives;
+    }
+
+    public function archives_create($request){
+      $this->set_day = $request->year . '-' . $request->month . '-' . $request->day;
+      $this->reply_create = Execution::create([
+        'day' => $this->set_day, 
+        'progress' => $request->progress, 
+        'memo' => $request->memo,
+        'content_id' => $request->content_id,
+      ]);
+      return $this->reply_create;
+    }
+
+    public function archive_delete($request){
+      $this->archive_delete = Execution::destroy($request);
+      return $this->archive_delete;
     }
   }
