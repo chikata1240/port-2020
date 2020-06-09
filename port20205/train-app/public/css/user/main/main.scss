@@ -1,105 +1,76 @@
 @import "../../master/master.scss";
 
-html, body {
-  // コンテンツ
-  .user_main{
-    display: flex;
-    width: 1300px;
-    padding: 150px 0 0 100px;
-    .user_information{
-        background-color: #ccc;
+// ナビゲーション無効
+body .user_main .user_information .composer_box .sub_link_box{
+  &:nth-child(1) .nav{
+    display: block;
+    pointer-events: none;
+    .sub_link{
+      background-color: #fff;
+    }
+  }
+}
+// コンテンツBOX
+body .user_main .user_contents{
+  background-color: #ccc;
+  box-sizing: border-box;
+  width: 900px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+  // コンテンツ本体
+  .main_content_title{
+    width: 100%;
+    margin-bottom: 50px;
+    // コンテンツヘッダー
+    .main_content_title_header{
+      background-color: #333;
+      width: 100%;
+      height: 50px;
+      .main_content_title_header_day{
         box-sizing: border-box;
-        width: 250px;
-        height: 370px;
-        margin-left: 0px;
-        .user_image{
-          width: 200px;
-          height: 200px;
-          margin: 20px auto 0;
-          > img{
-              width: 200px;
-              height: 200px;
-          }
-      }
-      .user_name{
-          font-size: 1.7rem;
-          width: 200px;
-          margin: auto;
-          padding-top: 10px;
-          > div{
-              padding-bottom: 5px;
-              &:nth-child(odd){
-                  font-weight: 600;
-                  padding-left: 10px;
-              }
-              &:nth-child(even){
-                  padding-left: 30px;
-              }
-          }
+        border-left: 2px solid #fff;
+        line-height: 50px;
+        font-size: 1.7rem;
+        margin-left: 30px;
+        padding-left: 15px;
       }
     }
-    .user_contents{
-      background-color: #ccc;
-      box-sizing: border-box;
-      width: 900px;
-      margin-left: 50px;
-      margin-bottom: 100px;
-
-      .main_content_title{
-        width: 100%;
-        margin-bottom: 50px;
-
-        .main_content_title_header{
-          background-color: #333;
+    // コンテンツ情報
+    .detail_content_title_parts_box{
+      width: 100%;
+      > a{
+        text-decoration: none;
+        color: #000;
+        .detail_content_title_parts{
+          background-color: #666;
+          display: flex;
+          box-sizing: border-box;
           width: 100%;
-          height: 50px;
-
-          .main_content_title_header_day{
-            box-sizing: border-box;
-            border-left: 2px solid #fff;
-            line-height: 50px;
-            font-size: 1.7rem;
-            margin-left: 30px;
-            padding-left: 15px;
+          padding: 20px 0;
+          // ユーザー画像
+          .detail_content_title_parts_image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #888;
+            width: 20%;
+            > img{
+              width: 80%;
           }
-        }
-        .detail_content_title_parts_box{
-          width: 100%;
-
-          > a{
-            text-decoration: none;
-            color: #000;
-
-            .detail_content_title_parts{
-              background-color: #666;
-              display: flex;
+          }
+          // 本文
+          .detail_content_title_parts_text{
+            box-sizing: border-box;
+            background-color: #999;
+            width: 80%;
+            padding: 0 30px;
+            .detail_content_title_parts_text_title{
+              font-size: 2rem;
+            }
+            .detail_content_title_parts_text_recode{
               box-sizing: border-box;
-              width: 100%;
-              padding: 20px 0;
-              .detail_content_title_parts_image{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #888;
-                width: 20%;
-                > img{
-                  width: 80%;
-              }
-              }
-              .detail_content_title_parts_text{
-                box-sizing: border-box;
-                background-color: #999;
-                width: 80%;
-                padding: 0 30px;
-                .detail_content_title_parts_text_title{
-                  font-size: 2rem;
-                }
-                .detail_content_title_parts_text_recode{
-                  box-sizing: border-box;
-                  font-size: 1.5rem;
-                  padding-left: 15px;
-                }
-              }
+              font-size: 1.5rem;
+              padding-left: 15px;
             }
           }
         }
@@ -107,3 +78,4 @@ html, body {
     }
   }
 }
+

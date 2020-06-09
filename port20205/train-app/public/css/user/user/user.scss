@@ -1,87 +1,52 @@
 @import "../../master/master.scss";
 
-html, body {
-    .user_main{
-        display: flex;
-        width: 1300px;
-        padding: 150px 0 0 100px;
-        // ユーザー情婦
-        .user_information{
-            background-color: #ccc;
-            box-sizing: border-box;
-            width: 250px;
-            height: 370px;
-            margin-left: 0px;
-            .user_image{
-                width: 200px;
-                height: 200px;
-                margin: 20px auto 0;
-                > img{
-                    width: 200px;
-                    height: 200px;
-                }
-            }
-            .user_name{
-                font-size: 1.7rem;
-                width: 200px;
-                height: 120px;
-                margin: auto;
-                padding-top: 10px;
-                > div{
-                    padding-bottom: 5px;
-                    &:nth-child(odd){
-                        font-weight: 600;
-                        padding-left: 10px;
-                    }
-                    &:nth-child(even){
-                        padding-left: 30px;
-                    }
-                }
-            }
-        }
-        // コンテンツ
-        .user_contents{
-            display: flex;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            background-color: #ccc;
-            box-sizing: border-box;
-            width: 900px;
-            margin-left: 100px;
-            margin-bottom: 50px;
-
-            .user_content_title{
-                background-color: #999;
-                width: 250px;
-                margin-left: 37px;
-                margin-bottom: 50px;
-
-                .user_content_title_header{
-                    background-color: #777;
-                    width: 100%;
-                    height: 60px;
-                }
-
-                > a{
-                    text-decoration: none;
-                    color: #000;
-                    .user_content_title_parts{
-                        box-sizing: border-box;
-                        width: 80%;
-                        margin: auto;
-                        padding: 30px 0;
-                        
-                        .user_content_title_parts_title{
-                            font-size: 2rem;
-                        }
-                        .user_content_title_parts_record{
-                            font-size: 1.5rem;
-                            padding-left: 20px;
-                            padding-bottom: 5px;
-                        }
-                    }
-                }
-            }
-        }
+// ナビゲーション無効
+body .user_main .user_information .composer_box .sub_link_box{
+  &:nth-child(2) .nav{
+    display: block;
+    pointer-events: none;
+    .sub_link{
+      background-color: #fff;
     }
+  }
+}
+// コンテンツBOX
+body .user_main .user_contents{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: #ccc;
+  box-sizing: border-box;
+  width: 900px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  .user_content_title{
+    background-color: #999;
+    width: 250px;
+    margin-left: 37px;
+    margin-bottom: 50px;
+    .user_content_title_header{
+      background-color: #777;
+      width: 100%;
+      height: 60px;
+    }
+    > a{
+      text-decoration: none;
+      color: #000;
+      .user_content_title_parts{
+        box-sizing: border-box;
+        width: 80%;
+        margin: auto;
+        padding: 30px 0;
+        .user_content_title_parts_title{
+          font-size: 2rem;
+        }
+        .user_content_title_parts_record{
+          font-size: 1.5rem;
+          padding-left: 20px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
 }

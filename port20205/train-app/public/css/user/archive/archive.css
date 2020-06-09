@@ -10,77 +10,59 @@ html, body {
   margin: 0;
 }
 
-html .header, body .header {
-  background-color: #636b6f;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 80px;
-}
-
-html .links > a, body .links > a {
-  color: #fff;
-  padding: 0 13px;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: .1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 html .user_main, body .user_main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 1300px;
-  padding: 150px 0 0 100px;
+  margin: auto;
 }
 
 html .user_main .user_information, body .user_main .user_information {
-  background-color: #ccc;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   width: 250px;
-  height: 370px;
-  margin-left: 0px;
 }
 
-html .user_main .user_information .user_image, body .user_main .user_information .user_image {
-  width: 200px;
-  height: 200px;
-  margin: 20px auto 0;
-}
-
-html .user_main .user_information .user_image > img, body .user_main .user_information .user_image > img {
-  width: 200px;
-  height: 200px;
-}
-
-html .user_main .user_information .user_name, body .user_main .user_information .user_name {
-  font-size: 1.7rem;
-  width: 200px;
-  height: 120px;
+html .user_main .user_information .composer_box, body .user_main .user_information .composer_box {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
   margin: auto;
-  padding-top: 10px;
 }
 
-html .user_main .user_information .user_name > div, body .user_main .user_information .user_name > div {
-  padding-bottom: 5px;
+html .user_main .user_information .composer_visible, body .user_main .user_information .composer_visible {
+  visibility: visible;
+  -webkit-animation-duration: .1s;
+          animation-duration: .1s;
+  -webkit-animation-name: slide-in;
+          animation-name: slide-in;
 }
 
-html .user_main .user_information .user_name > div:nth-child(odd), body .user_main .user_information .user_name > div:nth-child(odd) {
-  font-weight: 600;
-  padding-left: 10px;
+html .user_main .user_information .composer_hidden, body .user_main .user_information .composer_hidden {
+  visibility: hidden;
+  -webkit-animation-duration: .1s;
+          animation-duration: .1s;
+  -webkit-animation-name: slide-out;
+          animation-name: slide-out;
 }
 
-html .user_main .user_information .user_name > div:nth-child(even), body .user_main .user_information .user_name > div:nth-child(even) {
-  padding-left: 30px;
+html #app .navbar .container .navbar-brand, body #app .navbar .container .navbar-brand {
+  font-size: 3.2rem;
 }
 
-html .user_main .user_contents, body .user_main .user_contents {
+body .user_main .user_information .composer_box .sub_link_box:nth-child(6) .nav {
+  display: block;
+  pointer-events: none;
+}
+
+body .user_main .user_information .composer_box .sub_link_box:nth-child(6) .nav .sub_link {
+  background-color: #fff;
+}
+
+body .user_main .user_contents {
   background-color: #ccc;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -89,13 +71,13 @@ html .user_main .user_contents, body .user_main .user_contents {
   margin-bottom: 100px;
 }
 
-html .user_main .user_contents .archive_content_title_header, body .user_main .user_contents .archive_content_title_header {
+body .user_main .user_contents .archive_content_title_header {
   background-color: #666;
   width: 100%;
   height: 60px;
 }
 
-html .user_main .user_contents .archive_content, body .user_main .user_contents .archive_content {
+body .user_main .user_contents .archive_content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,14 +89,14 @@ html .user_main .user_contents .archive_content, body .user_main .user_contents 
   height: 450px;
 }
 
-html .user_main .user_contents .archive_content .archive_message, body .user_main .user_contents .archive_content .archive_message {
+body .user_main .user_contents .archive_content .archive_message {
   position: relative;
   background-color: #999;
   width: 50%;
   height: 450px;
 }
 
-html .user_main .user_contents .archive_content .archive_message > div, body .user_main .user_contents .archive_content .archive_message > div {
+body .user_main .user_contents .archive_content .archive_message > div {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -126,36 +108,56 @@ html .user_main .user_contents .archive_content .archive_message > div, body .us
   width: 100%;
 }
 
-html .user_main .user_contents .archive_content .archive_content_title_parts, body .user_main .user_contents .archive_content .archive_content_title_parts {
+body .user_main .user_contents .archive_content .archive_content_title_parts {
   width: 40%;
   margin: auto;
 }
 
-html .user_main .user_contents .archive_content .archive_content_title_parts > form, body .user_main .user_contents .archive_content .archive_content_title_parts > form {
+body .user_main .user_contents .archive_content .archive_content_title_parts > form {
   width: 100%;
 }
 
-html .user_main .user_contents .archive_content .archive_content_title_parts > form > p, body .user_main .user_contents .archive_content .archive_content_title_parts > form > p {
+body .user_main .user_contents .archive_content .archive_content_title_parts > form > p {
   font-size: 1.7rem;
   margin-top: 0;
   margin-bottom: 5px;
   padding-top: 15px;
 }
 
-html .user_main .user_contents .archive_content .archive_content_title_parts > form > input, body .user_main .user_contents .archive_content .archive_content_title_parts > form > input {
-  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
-          box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+body .user_main .user_contents .archive_content .archive_content_title_parts > form #year {
+  width: 50px;
+  height: 30px;
+}
+
+body .user_main .user_contents .archive_content .archive_content_title_parts > form #month {
+  width: 50px;
+  height: 30px;
+}
+
+body .user_main .user_contents .archive_content .archive_content_title_parts > form #day {
+  width: 50px;
+  height: 30px;
+}
+
+body .user_main .user_contents .archive_content .archive_content_title_parts > form > label {
+  font-size: 1.5rem;
+  width: 50px;
+  height: 30px;
+  padding-left: 3px;
+}
+
+body .user_main .user_contents .archive_content .archive_content_title_parts > form > input {
   width: 320px;
   height: 30px;
   margin-left: 15px;
 }
 
-html .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit, body .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit {
+body .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit {
   width: 350px;
   margin: 50px auto;
 }
 
-html .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit .content_submit_button, body .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit .content_submit_button {
+body .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit .content_submit_button {
   border-style: none;
   border-bottom: 10px solid #ccc;
   border-radius: 15px;
@@ -166,13 +168,13 @@ html .user_main .user_contents .archive_content .archive_content_title_parts > f
   height: 65px;
 }
 
-html .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit .content_submit_button:hover, body .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit .content_submit_button:hover {
+body .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit .content_submit_button:hover {
   cursor: pointer;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
 
-html .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit .content_submit_button:active, body .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit .content_submit_button:active {
+body .user_main .user_contents .archive_content .archive_content_title_parts > form .content_submit .content_submit_button:active {
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
   border-bottom: 5px solid #ccc;

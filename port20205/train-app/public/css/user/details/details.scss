@@ -1,141 +1,135 @@
 @import "../../master/master.scss";
 
-html, body {
-    .user_main{
-        display: flex;
-        width: 1300px;
-        padding: 150px 0 0 100px;
-        // ユーザー情報
-        .user_information{
-            background-color: #ccc;
-            box-sizing: border-box;
-            width: 250px;
-            height: 370px;
-            margin-left: 0px;
-            .user_image{
-                width: 200px;
-                height: 200px;
-                margin: 20px auto 0;
-                > img{
-                    width: 200px;
-                    height: 200px;
-                }
-            }
-            .user_name{
-                font-size: 1.7rem;
-                width: 200px;
-                height: 120px;
-                margin: auto;
-                padding-top: 10px;
-                > div{
-                    padding-bottom: 5px;
-                    &:nth-child(odd){
-                        font-weight: 600;
-                        padding-left: 10px;
-                    }
-                    &:nth-child(even){
-                        padding-left: 30px;
-                    }
-                }
-            }
-        }
-        // コンテンツ
-        .user_contents{
-            background-color: #ccc;
-            box-sizing: border-box;
-            width: 900px;
-            margin-left: 100px;
-            margin-bottom: 100px;
-
-            .detail_content_title{
-                background-color: #999;
-                width: 100%;
-                margin: 0 auto 50px;
-
-                .detail_content_title_header{
-                    background-color: #777;
-                    width: 100%;
-                    height: 60px;
-                }
-                .detail_content_title_parts{
-                    display: flex;
-                    align-items: center;
-                    width: 90%;
-                    margin: auto;
-                    padding: 30px 0;
-                    
-                    .detail_content_title_parts_goal{
-                        width: 70%;
-                        .detail_content_title_parts_title{
-                            font-size: 2rem;
-                        }
-                        .detail_content_title_parts_record{
-                            font-size: 2.5rem;
-                            padding-left: 20px;
-                        }
-                    }
-                    .detail_content_title_parts_archibe{
-                        background-color: #444;
-                        width: 20%;
-                        height: 180px;
-                        > a{
-                            text-decoration: none;
-                            color: #000;
-                            .detail_content_title_parts_archibe_link{
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                font-size: 2rem;
-                                font-weight: 600;
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .detail_content_progress{
-                background-color: #999;
-                width: 80%;
-                margin: 0 auto 30px;
-                padding-bottom: 20px;
-
-                .detail_content_progress_header{
-                    background-color: #777;
-                    width: 100%;
-                    height: 60px;
-                }
-                .detail_content_progress_parts{
-                    width: 80%;
-                    margin: auto;
-
-                    .detail_content_progress_parts_title{
-                        font-size: 2rem;
-                    }
-                    .detail_content_progress_parts_record{
-                        font-size: 2.5rem;
-                        padding-left: 20px;
-                    }
-                }
-            }
-
-            .detail_pagenation{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #777;
-                width: 100%;
-                height: 50px;
-                .detail_pagenation_parts{
-                    font-size: 1.5rem;
-                    margin-left: 20px;
-                    > a{
-                        text-decoration: none;
-                        color: #000;
-                    }
-                }
-            }
-        }
+// ナビゲーション無効
+body .user_main .user_information .composer_box .sub_link_box{
+  &:nth-child(5) .nav{
+    display: block;
+    pointer-events: none;
+    .sub_link{
+      background-color: #fff;
     }
+  }
+}
+// コンテンツBOX
+body .user_main .user_contents{
+  background-color: #ccc;
+  box-sizing: border-box;
+  width: 900px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  .detail_content_title{
+    background-color: #999;
+    width: 100%;
+    margin: 0 auto 50px;
+    .detail_content_title_header{
+      background-color: #777;
+      width: 100%;
+      height: 60px;
+    }
+    .detail_content_title_parts{
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      padding: 30px 0;
+      .detail_content_title_parts_goal{
+        width: 70%;
+        .detail_content_title_parts_title{
+          font-size: 2rem;
+        }
+        .detail_content_title_parts_record{
+          box-sizing: border-box;
+          font-size: 2.5rem;
+          padding-left: 20px;
+        }
+      }
+      .detail_content_title_parts_archive{
+        background-color: #444;
+        width: 20%;
+        height: 180px;
+        > a{
+          text-decoration: none;
+          color: #000;
+          .detail_content_title_parts_archive_link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 600;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .detail_content_delete_box{
+        position: absolute;
+        right: -5.5%;
+        background-color: #222;
+        width: 5%;
+        height: 100%;
+        > a{
+          .detail_content_delete{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .detail_content_progress{
+    background-color: #999;
+    width: 80%;
+    margin: 0 auto 30px;
+    .detail_content_progress_header{
+      background-color: #777;
+      width: 100%;
+      height: 60px;
+    }
+    .delete_content_box{
+      display: flex;
+      width: 100%;
+      .detail_content_progress_parts{
+        width: 80%;
+        margin: auto;
+        
+        .detail_content_progress_parts_title{
+          font-size: 2rem;
+        }
+        .detail_content_progress_parts_record{
+          font-size: 2.5rem;
+          padding-left: 20px;
+          &:last-child{
+            padding-bottom: 20px;
+          }
+        }
+      }
+      .detail_content_archive_delete_box{
+        background-color: #222;
+        width: 5%;
+        > a{
+          .detail_content_archive_delete{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .detail_pagenation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #777;
+    width: 100%;
+    height: 50px;
+    .detail_pagenation_parts{
+      font-size: 1.5rem;
+      margin-left: 20px;
+      > a{
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
 }

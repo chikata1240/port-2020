@@ -10,77 +10,59 @@ html, body {
   margin: 0;
 }
 
-html .header, body .header {
-  background-color: #636b6f;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 80px;
-}
-
-html .links > a, body .links > a {
-  color: #fff;
-  padding: 0 13px;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: .1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 html .user_main, body .user_main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 1300px;
-  padding: 150px 0 0 100px;
+  margin: auto;
 }
 
 html .user_main .user_information, body .user_main .user_information {
-  background-color: #ccc;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   width: 250px;
-  height: 370px;
-  margin-left: 0px;
 }
 
-html .user_main .user_information .user_image, body .user_main .user_information .user_image {
-  width: 200px;
-  height: 200px;
-  margin: 20px auto 0;
-}
-
-html .user_main .user_information .user_image > img, body .user_main .user_information .user_image > img {
-  width: 200px;
-  height: 200px;
-}
-
-html .user_main .user_information .user_name, body .user_main .user_information .user_name {
-  font-size: 1.7rem;
-  width: 200px;
-  height: 120px;
+html .user_main .user_information .composer_box, body .user_main .user_information .composer_box {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
   margin: auto;
-  padding-top: 10px;
 }
 
-html .user_main .user_information .user_name > div, body .user_main .user_information .user_name > div {
-  padding-bottom: 5px;
+html .user_main .user_information .composer_visible, body .user_main .user_information .composer_visible {
+  visibility: visible;
+  -webkit-animation-duration: .1s;
+          animation-duration: .1s;
+  -webkit-animation-name: slide-in;
+          animation-name: slide-in;
 }
 
-html .user_main .user_information .user_name > div:nth-child(odd), body .user_main .user_information .user_name > div:nth-child(odd) {
-  font-weight: 600;
-  padding-left: 10px;
+html .user_main .user_information .composer_hidden, body .user_main .user_information .composer_hidden {
+  visibility: hidden;
+  -webkit-animation-duration: .1s;
+          animation-duration: .1s;
+  -webkit-animation-name: slide-out;
+          animation-name: slide-out;
 }
 
-html .user_main .user_information .user_name > div:nth-child(even), body .user_main .user_information .user_name > div:nth-child(even) {
-  padding-left: 30px;
+html #app .navbar .container .navbar-brand, body #app .navbar .container .navbar-brand {
+  font-size: 3.2rem;
 }
 
-html .user_main .user_contents, body .user_main .user_contents {
+body .user_main .user_information .composer_box .sub_link_box:nth-child(5) .nav {
+  display: block;
+  pointer-events: none;
+}
+
+body .user_main .user_information .composer_box .sub_link_box:nth-child(5) .nav .sub_link {
+  background-color: #fff;
+}
+
+body .user_main .user_contents {
   background-color: #ccc;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -89,19 +71,20 @@ html .user_main .user_contents, body .user_main .user_contents {
   margin-bottom: 100px;
 }
 
-html .user_main .user_contents .detail_content_title, body .user_main .user_contents .detail_content_title {
+body .user_main .user_contents .detail_content_title {
   background-color: #999;
   width: 100%;
   margin: 0 auto 50px;
 }
 
-html .user_main .user_contents .detail_content_title .detail_content_title_header, body .user_main .user_contents .detail_content_title .detail_content_title_header {
+body .user_main .user_contents .detail_content_title .detail_content_title_header {
   background-color: #777;
   width: 100%;
   height: 60px;
 }
 
-html .user_main .user_contents .detail_content_title .detail_content_title_parts, body .user_main .user_contents .detail_content_title .detail_content_title_parts {
+body .user_main .user_contents .detail_content_title .detail_content_title_parts {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,31 +96,33 @@ html .user_main .user_contents .detail_content_title .detail_content_title_parts
   padding: 30px 0;
 }
 
-html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal {
+body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal {
   width: 70%;
 }
 
-html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal .detail_content_title_parts_title, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal .detail_content_title_parts_title {
+body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal .detail_content_title_parts_title {
   font-size: 2rem;
 }
 
-html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal .detail_content_title_parts_record, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal .detail_content_title_parts_record {
+body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_goal .detail_content_title_parts_record {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 2.5rem;
   padding-left: 20px;
 }
 
-html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe {
+body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archive {
   background-color: #444;
   width: 20%;
   height: 180px;
 }
 
-html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe > a, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe > a {
+body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archive > a {
   text-decoration: none;
   color: #000;
 }
 
-html .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe > a .detail_content_title_parts_archibe_link, body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archibe > a .detail_content_title_parts_archibe_link {
+body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_title_parts_archive > a .detail_content_title_parts_archive_link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,34 +138,67 @@ html .user_main .user_contents .detail_content_title .detail_content_title_parts
   height: 100%;
 }
 
-html .user_main .user_contents .detail_content_progress, body .user_main .user_contents .detail_content_progress {
+body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_delete_box {
+  position: absolute;
+  right: -5.5%;
+  background-color: #222;
+  width: 5%;
+  height: 100%;
+}
+
+body .user_main .user_contents .detail_content_title .detail_content_title_parts .detail_content_delete_box > a .detail_content_delete {
+  width: 100%;
+  height: 100%;
+}
+
+body .user_main .user_contents .detail_content_progress {
   background-color: #999;
   width: 80%;
   margin: 0 auto 30px;
-  padding-bottom: 20px;
 }
 
-html .user_main .user_contents .detail_content_progress .detail_content_progress_header, body .user_main .user_contents .detail_content_progress .detail_content_progress_header {
+body .user_main .user_contents .detail_content_progress .detail_content_progress_header {
   background-color: #777;
   width: 100%;
   height: 60px;
 }
 
-html .user_main .user_contents .detail_content_progress .detail_content_progress_parts, body .user_main .user_contents .detail_content_progress .detail_content_progress_parts {
+body .user_main .user_contents .detail_content_progress .delete_content_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body .user_main .user_contents .detail_content_progress .delete_content_box .detail_content_progress_parts {
   width: 80%;
   margin: auto;
 }
 
-html .user_main .user_contents .detail_content_progress .detail_content_progress_parts .detail_content_progress_parts_title, body .user_main .user_contents .detail_content_progress .detail_content_progress_parts .detail_content_progress_parts_title {
+body .user_main .user_contents .detail_content_progress .delete_content_box .detail_content_progress_parts .detail_content_progress_parts_title {
   font-size: 2rem;
 }
 
-html .user_main .user_contents .detail_content_progress .detail_content_progress_parts .detail_content_progress_parts_record, body .user_main .user_contents .detail_content_progress .detail_content_progress_parts .detail_content_progress_parts_record {
+body .user_main .user_contents .detail_content_progress .delete_content_box .detail_content_progress_parts .detail_content_progress_parts_record {
   font-size: 2.5rem;
   padding-left: 20px;
 }
 
-html .user_main .user_contents .detail_pagenation, body .user_main .user_contents .detail_pagenation {
+body .user_main .user_contents .detail_content_progress .delete_content_box .detail_content_progress_parts .detail_content_progress_parts_record:last-child {
+  padding-bottom: 20px;
+}
+
+body .user_main .user_contents .detail_content_progress .delete_content_box .detail_content_archive_delete_box {
+  background-color: #222;
+  width: 5%;
+}
+
+body .user_main .user_contents .detail_content_progress .delete_content_box .detail_content_archive_delete_box > a .detail_content_archive_delete {
+  width: 100%;
+  height: 100%;
+}
+
+body .user_main .user_contents .detail_pagenation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,12 +213,12 @@ html .user_main .user_contents .detail_pagenation, body .user_main .user_content
   height: 50px;
 }
 
-html .user_main .user_contents .detail_pagenation .detail_pagenation_parts, body .user_main .user_contents .detail_pagenation .detail_pagenation_parts {
+body .user_main .user_contents .detail_pagenation .detail_pagenation_parts {
   font-size: 1.5rem;
   margin-left: 20px;
 }
 
-html .user_main .user_contents .detail_pagenation .detail_pagenation_parts > a, body .user_main .user_contents .detail_pagenation .detail_pagenation_parts > a {
+body .user_main .user_contents .detail_pagenation .detail_pagenation_parts > a {
   text-decoration: none;
   color: #000;
 }

@@ -1,112 +1,85 @@
 @import "../../master/master.scss";
 
-html, body {
-  // コンテンツ
-  .user_main{
-    display: flex;
-    width: 1300px;
-    padding: 150px 0 0 100px;
-    .user_information{
-        background-color: #ccc;
-        box-sizing: border-box;
-        width: 350px;
-        height: 370px;
-        margin-left: 0px;
-        .user_image{
-          width: 200px;
-          height: 200px;
-          margin: 20px auto 0;
-          > img{
-              width: 200px;
-              height: 200px;
-          }
-      }
-      .user_name{
-          font-size: 1.7rem;
-          width: 200px;
-          height: 120px;
-          margin: auto;
-          padding-top: 10px;
-          > div{
-              padding-bottom: 5px;
-              &:nth-child(odd){
-                  font-weight: 600;
-                  padding-left: 10px;
-              }
-              &:nth-child(even){
-                  padding-left: 30px;
-              }
-          }
-      }
+// ナビゲーション無効
+body .user_main .user_information .composer_box .sub_link_box{
+  &:nth-child(4) .nav{
+    display: block;
+    pointer-events: none;
+    .sub_link{
+      background-color: #fff;
     }
-    .user_contents{
-      background-color: #ccc;
-      box-sizing: border-box;
-      width: 900px;
-      margin-left: 100px;
-      margin-bottom: 100px;
-      .training_menu{
+  }
+}
+// コンテンツBOX
+body .user_main .user_contents{
+  background-color: #ccc;
+  box-sizing: border-box;
+  width: 900px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  .training_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #999;
+    font-size: 3rem;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 40px;
+  }
+  .training_contents{
+    display: flex;
+    justify-content: space-evenly;
+    .training_content{
+      background-color: #999;
+      width: 400px;
+      margin-bottom: 70px;
+      .training_content_header{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #999;
-        font-size: 3rem;
+        font-size: 2.5rem;
+        border-bottom: 2px solid #000;
         width: 100%;
-        height: 70px;
-        margin-bottom: 40px;
+        height: 50px;
+        margin-bottom: 30px;
       }
-      .training_contents{
-        display: flex;
-        justify-content: space-evenly;
-        
-        .book_content{
-          background-color: #999;
-          width: 400px;
-          height: 480px;
-          margin-bottom: 70px;
-          .content_header{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            border-bottom: 2px solid #000;
-            width: 100%;
-            height: 50px;
-            margin-bottom: 30px;
-          }
-          form{
-            width: 90%;
-            margin: auto;
-            >p{
-              font-size: 1.7rem;
-              margin-bottom: 5px;
-            }
-            > input{
-              width:320px;
-              height: 30px;
-              margin-left: 15px;
-              box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22);
-            }
-            .content_submit{
-              width: 90%;
-              margin: 50px auto;
-              .content_submit_button{
-                border-style: none;
-                border-bottom: 10px solid #ccc;
-                border-radius: 15px;
-                background-color: #fff;
-                box-shadow: 0 0 5px 0 rgba(0,0,0,.12), 0 3px 4px 0 rgba(0,0,0,.22);
-                width: 100%;
-                height: 65px;
-                @include sendhover();
-              }
-            }
-          }
+      form{
+        width: 90%;
+        margin: auto;
+        > p{
+          font-size: 1.7rem;
+          margin: 8px 0;
         }
-        .training_content{
-          background-color: #999;
-          width: 400px;
-          height: 500px;
+        > input{
+          width:320px;
+          height: 30px;
+          margin-left: 15px;
+        }
+        #year,#month,#day{
+          text-align: right;
+          width: 50px;
+        }
+        > span{
+          display: inline-block;
+          color: red;
+          font-size: 1rem;
+          width: 100%;
+          padding: 5px 0 0 15px;
+        }
+        .content_submit{
+          width: 90%;
+          margin: 30px auto;
+          .content_submit_button{
+            border-style: none;
+            border-bottom: 10px solid #ccc;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 5px 0 rgba(0,0,0,.12), 0 3px 4px 0 rgba(0,0,0,.22);
+            width: 100%;
+            height: 65px;
+            @include sendhover();
+          }
         }
       }
     }

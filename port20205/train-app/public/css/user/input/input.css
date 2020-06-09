@@ -10,77 +10,59 @@ html, body {
   margin: 0;
 }
 
-html .header, body .header {
-  background-color: #636b6f;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 80px;
-}
-
-html .links > a, body .links > a {
-  color: #fff;
-  padding: 0 13px;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: .1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 html .user_main, body .user_main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 1300px;
-  padding: 150px 0 0 100px;
+  margin: auto;
 }
 
 html .user_main .user_information, body .user_main .user_information {
-  background-color: #ccc;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 350px;
-  height: 370px;
-  margin-left: 0px;
+  width: 250px;
 }
 
-html .user_main .user_information .user_image, body .user_main .user_information .user_image {
-  width: 200px;
-  height: 200px;
-  margin: 20px auto 0;
-}
-
-html .user_main .user_information .user_image > img, body .user_main .user_information .user_image > img {
-  width: 200px;
-  height: 200px;
-}
-
-html .user_main .user_information .user_name, body .user_main .user_information .user_name {
-  font-size: 1.7rem;
-  width: 200px;
-  height: 120px;
+html .user_main .user_information .composer_box, body .user_main .user_information .composer_box {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
   margin: auto;
-  padding-top: 10px;
 }
 
-html .user_main .user_information .user_name > div, body .user_main .user_information .user_name > div {
-  padding-bottom: 5px;
+html .user_main .user_information .composer_visible, body .user_main .user_information .composer_visible {
+  visibility: visible;
+  -webkit-animation-duration: .1s;
+          animation-duration: .1s;
+  -webkit-animation-name: slide-in;
+          animation-name: slide-in;
 }
 
-html .user_main .user_information .user_name > div:nth-child(odd), body .user_main .user_information .user_name > div:nth-child(odd) {
-  font-weight: 600;
-  padding-left: 10px;
+html .user_main .user_information .composer_hidden, body .user_main .user_information .composer_hidden {
+  visibility: hidden;
+  -webkit-animation-duration: .1s;
+          animation-duration: .1s;
+  -webkit-animation-name: slide-out;
+          animation-name: slide-out;
 }
 
-html .user_main .user_information .user_name > div:nth-child(even), body .user_main .user_information .user_name > div:nth-child(even) {
-  padding-left: 30px;
+html #app .navbar .container .navbar-brand, body #app .navbar .container .navbar-brand {
+  font-size: 3.2rem;
 }
 
-html .user_main .user_contents, body .user_main .user_contents {
+body .user_main .user_information .composer_box .sub_link_box:nth-child(4) .nav {
+  display: block;
+  pointer-events: none;
+}
+
+body .user_main .user_information .composer_box .sub_link_box:nth-child(4) .nav .sub_link {
+  background-color: #fff;
+}
+
+body .user_main .user_contents {
   background-color: #ccc;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -89,7 +71,7 @@ html .user_main .user_contents, body .user_main .user_contents {
   margin-bottom: 100px;
 }
 
-html .user_main .user_contents .training_menu, body .user_main .user_contents .training_menu {
+body .user_main .user_contents .training_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,7 +88,7 @@ html .user_main .user_contents .training_menu, body .user_main .user_contents .t
   margin-bottom: 40px;
 }
 
-html .user_main .user_contents .training_contents, body .user_main .user_contents .training_contents {
+body .user_main .user_contents .training_contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,14 +97,13 @@ html .user_main .user_contents .training_contents, body .user_main .user_content
           justify-content: space-evenly;
 }
 
-html .user_main .user_contents .training_contents .book_content, body .user_main .user_contents .training_contents .book_content {
+body .user_main .user_contents .training_contents .training_content {
   background-color: #999;
   width: 400px;
-  height: 480px;
   margin-bottom: 70px;
 }
 
-html .user_main .user_contents .training_contents .book_content .content_header, body .user_main .user_contents .training_contents .book_content .content_header {
+body .user_main .user_contents .training_contents .training_content .training_content_header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,30 +120,41 @@ html .user_main .user_contents .training_contents .book_content .content_header,
   margin-bottom: 30px;
 }
 
-html .user_main .user_contents .training_contents .book_content form, body .user_main .user_contents .training_contents .book_content form {
+body .user_main .user_contents .training_contents .training_content form {
   width: 90%;
   margin: auto;
 }
 
-html .user_main .user_contents .training_contents .book_content form > p, body .user_main .user_contents .training_contents .book_content form > p {
+body .user_main .user_contents .training_contents .training_content form > p {
   font-size: 1.7rem;
-  margin-bottom: 5px;
+  margin: 8px 0;
 }
 
-html .user_main .user_contents .training_contents .book_content form > input, body .user_main .user_contents .training_contents .book_content form > input {
+body .user_main .user_contents .training_contents .training_content form > input {
   width: 320px;
   height: 30px;
   margin-left: 15px;
-  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
-          box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
 }
 
-html .user_main .user_contents .training_contents .book_content form .content_submit, body .user_main .user_contents .training_contents .book_content form .content_submit {
+body .user_main .user_contents .training_contents .training_content form #year, body .user_main .user_contents .training_contents .training_content form #month, body .user_main .user_contents .training_contents .training_content form #day {
+  text-align: right;
+  width: 50px;
+}
+
+body .user_main .user_contents .training_contents .training_content form > span {
+  display: inline-block;
+  color: red;
+  font-size: 1rem;
+  width: 100%;
+  padding: 5px 0 0 15px;
+}
+
+body .user_main .user_contents .training_contents .training_content form .content_submit {
   width: 90%;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
-html .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button, body .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button {
+body .user_main .user_contents .training_contents .training_content form .content_submit .content_submit_button {
   border-style: none;
   border-bottom: 10px solid #ccc;
   border-radius: 15px;
@@ -173,21 +165,15 @@ html .user_main .user_contents .training_contents .book_content form .content_su
   height: 65px;
 }
 
-html .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button:hover, body .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button:hover {
+body .user_main .user_contents .training_contents .training_content form .content_submit .content_submit_button:hover {
   cursor: pointer;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
 
-html .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button:active, body .user_main .user_contents .training_contents .book_content form .content_submit .content_submit_button:active {
+body .user_main .user_contents .training_contents .training_content form .content_submit .content_submit_button:active {
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
   border-bottom: 5px solid #ccc;
-}
-
-html .user_main .user_contents .training_contents .training_content, body .user_main .user_contents .training_contents .training_content {
-  background-color: #999;
-  width: 400px;
-  height: 500px;
 }
 /*# sourceMappingURL=input.css.map */

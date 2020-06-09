@@ -1,116 +1,81 @@
 @import "../../master/master.scss";
 
-html, body {
-    // コンテンツ
-    .user_main{
-        display: flex;
-        width: 1300px;
-        padding: 150px 0 0 100px;
-        .user_information{
-            background-color: #ccc;
-            box-sizing: border-box;
-            width: 350px;
-            height: 370px;
-            margin-left: 0px;
-            .user_image{
-              width: 200px;
-              height: 200px;
-              margin: 20px auto 0;
-              > img{
-                  width: 200px;
-                  height: 200px;
-              }
-          }
-          .user_name{
-              font-size: 1.7rem;
-              width: 200px;
-              height: 120px;
-              margin: auto;
-              padding-top: 10px;
-              > div{
-                  padding-bottom: 5px;
-                  &:nth-child(odd){
-                      font-weight: 600;
-                      padding-left: 10px;
-                  }
-                  &:nth-child(even){
-                      padding-left: 30px;
-                  }
-              }
-          }
-        }
-        .user_contents{
-            background-color: #ccc;
-            box-sizing: border-box;
-            width: 900px;
-            margin-left: 100px;
-            margin-bottom: 50px;
-
-            .user_edit_content_title_header{
-              background-color: #777;
-              width: 100%;
-              height: 60px;
-            }
-
-            .user_edit_content_title_parts{
-              display: flex;
-              justify-content: space-evenly;
-              width: 95%;
-              height: 250px;
-              margin: auto;
-
-              .user_edit_content_title_parts_image{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #999;
-                width: 250px;
-                height: 100%;
-                
-                > img{
-                  width:128px;
-                  height:128px;
-                }
-              }
-              .user_edit_content_title_parts_form{
-                background-color: #999;
-                width: 500px;
-                height: 100%;
-
-                form{
-                  width: 100%;
-                  > label{
-                    display: block;
-                    background: #333;
-                    color: #fff;
-                    cursor: pointer;
-                    line-height: 50px;
-                    text-align: center;
-                    width: 200px;
-                    height: 50px;
-                    margin: 50px auto 0;
-                    
-                    > input{
-                      display: none;
-                    }
-                  }
-                  .content_submit{
-                    width: 90%;
-                    margin: 50px auto;
-                    .content_submit_button{
-                      border-style: none;
-                      border-bottom: 10px solid #ccc;
-                      border-radius: 15px;
-                      background-color: #fff;
-                      box-shadow: 0 0 5px 0 rgba(0,0,0,.12), 0 3px 4px 0 rgba(0,0,0,.22);
-                      width: 100%;
-                      height: 65px;
-                      @include sendhover();
-                    }
-                  }
-                }
-              }
-            }
-        }
+// ナビゲーション無効
+body .user_main .user_information .composer_box .sub_link_box{
+  &:nth-child(3) .nav{
+    display: block;
+    pointer-events: none;
+    .sub_link{
+      background-color: #fff;
     }
+  }
+}
+// コンテンツBOX
+body .user_main .user_contents{
+  background-color: #ccc;
+  box-sizing: border-box;
+  width: 900px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  .user_edit_content_title_header{
+    background-color: #777;
+    width: 100%;
+    height: 60px;
+  }
+  .user_edit_content_title_parts{
+    display: flex;
+    justify-content: space-evenly;
+    width: 95%;
+    height: 250px;
+    margin: auto;
+    .user_edit_content_title_parts_image{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #999;
+      width: 250px;
+      height: 100%;
+      > img{
+        width:128px;
+        height:128px;
+      }
+    }
+    .user_edit_content_title_parts_form{
+      background-color: #999;
+      width: 500px;
+      height: 100%;
+      form{
+        width: 100%;
+        > label{
+          display: block;
+          background: #333;
+          color: #fff;
+          cursor: pointer;
+          line-height: 50px;
+          text-align: center;
+          width: 200px;
+          height: 50px;
+          margin: 50px auto 0;
+          
+          > input{
+            display: none;
+          }
+        }
+        .content_submit{
+          width: 90%;
+          margin: 50px auto;
+          .content_submit_button{
+            border-style: none;
+            border-bottom: 10px solid #ccc;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 5px 0 rgba(0,0,0,.12), 0 3px 4px 0 rgba(0,0,0,.22);
+            width: 100%;
+            height: 65px;
+            @include sendhover();
+          }
+        }
+      }
+    }
+  }
 }
