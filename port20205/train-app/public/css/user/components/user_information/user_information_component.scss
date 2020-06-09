@@ -1,0 +1,45 @@
+@import "../../../mixin/mixin.scss";
+@import "../../../color/color.scss";
+
+html, body {
+  .user_information{
+    .user_information_box{
+      background-color: #ccc;
+      width: 100%;
+      > a{
+        text-decoration: none;
+        color: #000;
+        .user_information_link{
+          box-sizing: border-box;
+          width: 100%;
+          padding-top: 20px;
+          .user_image{
+            width: 200px;
+            height: 200px;
+            margin: auto ;
+            > img{
+              width: 200px;
+              height: 200px;
+            }
+          }
+          .user_name{
+            font-size: 1.7rem;
+            width: 200px;
+            margin: auto;
+            padding-top: 10px;
+            > div{
+              padding-bottom: 5px;
+              &:nth-child(odd){
+                font-weight: 600;
+                padding-left: 10px;
+              }
+              &:nth-child(even){
+                padding-left: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
