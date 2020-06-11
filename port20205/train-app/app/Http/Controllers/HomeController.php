@@ -58,12 +58,11 @@ class HomeController extends Controller
     // ユーザー情報取得
     $user_registration_information = app('App\Myclasses\UserRegistration');
     $user_information = $user_registration_information->file_name();
-    // レコード情報取得
-    $user_records = app('App\Myclasses\UserRelation');
-    $records = $user_records->record();
     // リプライレコード取得
-    list($reply_records,$replies) = $user_records->reply_record($records,$progress_id);
-    return view('user.reply',compact('user_information','reply_records','replies'));
+    $user_records = app('App\Myclasses\UserRelation');
+    list($reply_records,$replies) = $user_records->reply_record($progress_id);
+    // var_dump($reply_records->created_at);
+    return view('user.reply',compact('user_information','reply_records','replies','progress_id'));
   }
 
   // reply_delete?id=
@@ -81,10 +80,9 @@ class HomeController extends Controller
     $user_information = $user_registration_information->file_name();
     // コンテンツの取得
     $plan = app('App\Myclasses\UserPlan');
-    $contents = $plan->contents();
     // 残り日数の取得
-    $limit = $plan->limit();
-    return view('user.user',compact('user_information','contents','limit'));
+    $contents = $plan->limit();
+    return view('user.user',compact('user_information','contents'));
   }
 
   // details?id=
@@ -99,22 +97,22 @@ class HomeController extends Controller
     $plan = app('App\Myclasses\UserPlan');
     $detail_content = $plan->select_content($content_id);
     // アーカイブ情報取得
-    $execution = app()->makeWith('App\Myclasses\UserExecution',['content_id' => $content_id]);
-    $archives = $execution->archives();
+    $execution = app('App\Myclasses\UserExecution');
+    $archives = $execution->archives($content_id);
     // type = bookのみページ表示
     $type = $plan->type();
     if($type == 'book'){
       // 進んだページ
-      $reed_page = $execution->reed_pages();
+      $reed_page = $execution->reed_pages($content_id);
       // ページ数計算
       $max_page = $plan->max_page($content_id);
       // 残ページ計算
-      $remaining_page = $execution->remaining_pages($max_page);
+      $remaining_page = $execution->remaining_pages($content_id,$max_page);
       $remaining_pages = ['reed_page' => $reed_page, 'max_page' => $max_page, 'remaining_page' => $remaining_page];
     }
     // ナビゲーション
     $nav_content = "archive?id=" . $content_id;
-    return view('user.details',compact('user_information','detail_content','remaining_pages','archives','nav_content'));
+    return view('user.details',compact('user_information','detail_content','remaining_pages','archives','nav_content','content_id'));
   }
 
   public function details_destroy(Request $request){
@@ -130,7 +128,6 @@ class HomeController extends Controller
     // ユーザー情報取得
     $user_registration_information = app('App\Myclasses\UserRegistration');
     $user_information = $user_registration_information->file_name();
-    
     return view('user.input', compact('user_information'));
   }
   public function input_book(InputBookRequest $request){
@@ -161,7 +158,7 @@ class HomeController extends Controller
   public function archive_post(Request $request){
     // コンテンツのid取得
     $content_id = $request->content_id;
-    $archives_creates = app()->makeWith('App\Myclasses\UserExecution',['content_id' => $content_id]);
+    $archives_creates = app('App\Myclasses\UserExecution');
     $archives_create = $archives_creates->archives_create($request);
     return redirect('/details?id=' . $content_id);
   }
@@ -170,7 +167,7 @@ class HomeController extends Controller
   public function archive_delete(Request $request){
     // コンテンツのid取得
     $content_id = $request->content_id;
-    $archive_deletes = app()->makeWith('App\Myclasses\UserExecution',['content_id' => $content_id]);
+    $archive_deletes = app('App\Myclasses\UserExecution');
     $archive_delete = $archive_deletes->archive_delete($request->id);
     return redirect('/details?id=' . $content_id);
   }

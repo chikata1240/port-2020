@@ -32,9 +32,6 @@
     {{-- コンテンツ box--}}
     <div class="user_contents">
       {{-- コンテンツ --}}
-      <?php
-        $i = 0; 
-      ?>
       @foreach ($contents as $content)
       @if ($content->type == 'book')
         <div class="user_content_title">
@@ -45,13 +42,10 @@
               <div class="user_content_title_parts_record">{{$content->content}}</div>
               <div class="user_content_title_parts_title">Time Limit</div>
               <div class="user_content_title_parts_record">{{$content->limit}}</div>
-              <div class="user_content_title_parts_record">{{$limit[$i]}}day</div>
+              <div class="user_content_title_parts_record">{{$content->diff}}day</div>
             </div>
           </a>
         </div>
-        <?php
-          $i++;
-        ?>
       @else
         <div class="user_content_title">
           <div class="user_content_title_header"></div>
@@ -66,5 +60,9 @@
         </div>
       @endif
       @endforeach
+      {{-- ページネーション  --}}
+      <div class="detail_pagenation">
+        {!! $contents->links() !!}
+      </div>
     </div>
 @endsection

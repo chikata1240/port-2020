@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/user/components/sub_link/sub_link_component.css">
     <link rel="stylesheet" href="css/user/components/slide/slide_component.css">
     <link rel="stylesheet" href="css/user/details/details.css">
+    <link href="/css/app.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -126,12 +127,7 @@
 
       {{-- ページネーション  --}}
       <div class="detail_pagenation">
-        <div class="detail_pagenation_parts">
-          <a href="">前のページ</a>
-        </div>
-        <div class="detail_pagenation_parts">
-          <a href="">次のページ</a>
-        </div>
+        {!! $archives->appends(['id' => $content_id])->links() !!}
       </div>
     </div>
   </div>

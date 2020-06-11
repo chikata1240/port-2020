@@ -20,10 +20,11 @@
     public $arrays;
     public $reply_record;
     public $replies;
+    public $plans;
 
     // メソッド
     public function record(){
-      $this->records = Execution::orderBy('created_at','DESC')->get();
+      $this->records = Execution::orderBy('created_at','DESC')->paginate(5);
       $this->users = plan::get(['content_id','content','user_id',]);
       $this->user = $this->users->toArray();
       $this->images = User::get(['id','file_name']);
@@ -63,14 +64,23 @@
       return $this->records;
     }
 
-    public function reply_record($records,$progress_id){
-      foreach($records as $record){
-        if($record->progress_id == $progress_id){
-          $this->reply_record[] = $record;
+    public function reply_record($progress_id){
+      // コンテンツ情報の取得
+      $this->records = Execution::find($progress_id);
+      $this->plans = plan::where('content_id',$this->records->content_id)->get();
+      $this->images = User::where('id',$this->plans[0]->user_id)->get(['id','file_name']);
+      foreach($this->plans as $plan){
+        foreach($this->images as $image){
+          if(empty($image['file_name'])){
+            $image['file_name'] = 'no_image.png';
+          }
+          $this->records['file_name'] = $image['file_name'];
+          $this->records['content'] = $plan['content'];
+          $this->records['user_id'] = $plan['user_id'];
         }
       }
-      
-      $this->replies = Reply::where('progress_id',$progress_id)->get();
+      // リプライ情報の取得
+      $this->replies = Reply::where('progress_id',$progress_id)->orderBy('created_at','DESC')->paginate(10);
       $this->images = User::get(['id','name','file_name']);
       $this->image = $this->images->toArray();
       foreach($this->replies as $reply){
@@ -84,7 +94,6 @@
           }
         }
       }
-
-      return [$this->reply_record,$this->replies];
+      return [$this->records,$this->replies];
     }
   }

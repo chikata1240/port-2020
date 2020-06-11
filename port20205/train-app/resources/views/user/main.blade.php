@@ -63,6 +63,11 @@
           </div>
         </div>
       @endforeach
+
+      {{-- ページネーション  --}}
+      <div class="detail_pagenation">
+        {!! $records->links() !!}
+      </div>
     </div>
   </div>
 @endsection
