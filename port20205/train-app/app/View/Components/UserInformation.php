@@ -1,24 +1,28 @@
 <?php
 
-namespace App\View\Components;
+  namespace App\View\Components;
 
-use Illuminate\View\Component;
+  use Illuminate\View\Component;
 
-class UserInformation extends Component
-{
+  class UserInformation extends Component
+  {
     public $file_name;
     public $name;
+    public $arrival;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($userInformation)
+    public function __construct($userInformation,$arrival)
     {
-        foreach($userInformation as $user){
-            $this->file_name = $user->file_name;
-            $this->name = $user->name;
-        }
+      // ユーザー情報
+      foreach($userInformation as $user){
+        $this->file_name = $user->file_name;
+        $this->name = $user->name;
+      }
+      // arrival
+      $this->arrival = $arrival;
     }
 
     /**
@@ -30,4 +34,4 @@ class UserInformation extends Component
     {
         return view('components.user-information');
     }
-}
+  }

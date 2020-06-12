@@ -35,7 +35,10 @@
     public function remaining_pages($content_id,$max_page){
       $this->execution = $this->detabaseconnection($content_id);
       $this->sum_pages = $this->execution->sum('progress');
-      $this->remaining_pages = floor(($this->sum_pages / $max_page) * 100);
+      $this->remaining_pages = ($this->sum_pages / $max_page) * 100;
+      if($this->remaining_pages >= 100){
+        $this->remaining_pages = 100;
+      }
       return $this->remaining_pages;
     }
 

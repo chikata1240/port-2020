@@ -12,7 +12,7 @@
                 <div>Name</div>
                 <div>{{ $name }}</div>
                 <div>Arrival</div>
-                <div>0</div>
+                <div>{{$arrival}}</div>
             </div>
         </div>
     </a>

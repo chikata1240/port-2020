@@ -33,6 +33,8 @@ Route::get('/user', 'HomeController@user');
 // 計画確認ページ
 Route::get('/details', 'HomeController@details');
 Route::get('/details_destroy', 'HomeController@details_destroy');
+Route::get('/details_arrival', 'HomeController@details_arrival');
+Route::get('/details_release', 'HomeController@details_release');
 // 計画入力ページ
 Route::get('/input', 'HomeController@input_get')->name('user.input');
 Route::post('/input_book', 'HomeController@input_book')->middleware('plan');

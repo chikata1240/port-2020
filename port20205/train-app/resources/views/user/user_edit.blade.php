@@ -11,7 +11,7 @@
   <div class="user_main">
     {{-- ユーザー情報 --}}
     <div class="user_information">
-      <x-user-information :user-information="$user_information" />
+      <x-user-information :user-information="$user_information" :arrival="$arrival" />
       <x-slide />
       <div id="composer" class="composer_box">
         <x-sub-links sub-links="home">

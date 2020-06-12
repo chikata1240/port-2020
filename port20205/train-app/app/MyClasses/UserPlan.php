@@ -12,19 +12,15 @@
     // プロパティ
     protected $plans;
     protected $contents;
+    protected $arrival;
     protected $content;
     protected $today;
     protected $diff = [];
     protected $max_page;
     protected $plan_counts;
-
-    // public function __construct()
-    // {
-    //   $this->plans = Plan::where('user_id',Auth::id());
-    // }
+    protected $check_arrival;
 
     // メソッド
-
     public function plans()
     {
       return Plan::where('user_id',Auth::id());
@@ -84,5 +80,25 @@
     {
       $this->plans = $this->plans()->where('content_id',$content_id)->get('type')->toArray();
       return $this->plans;
+    }
+
+    public function arrival($content_id)
+    {
+      $this->check_arrival = Plan::find($content_id);
+      $this->check_arrival->arrival = 1;
+      return $this->check_arrival->save();
+    }
+
+    public function release($content_id)
+    {
+      $this->check_arrival = Plan::find($content_id);
+      $this->check_arrival->arrival = 0;
+      return $this->check_arrival->save();
+    }
+
+    public function check_arrival($content_id)
+    {
+      $this->arrival = $this->plans->where('content_id',$content_id)->get('arrival')->toArray();
+      return $this->arrival[0];
     }
   }

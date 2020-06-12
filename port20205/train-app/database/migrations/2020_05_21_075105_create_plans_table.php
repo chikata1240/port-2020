@@ -19,6 +19,7 @@ class CreatePlansTable extends Migration
             $table->text('limit');
             $table->text('rule');
             $table->string('type',10);
+            $table->boolean('arrival')->default(false);
             $table->integer('user_id')->unsigned();
             $table->timestamps();
         });

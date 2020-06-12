@@ -14,6 +14,7 @@ class Plan extends Model
         'rule',
         'user_id',
         'type',
+        'arrival',
     ];
 
     public function executions(){

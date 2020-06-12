@@ -23,7 +23,8 @@
     public $plans;
 
     // メソッド
-    public function record(){
+    public function record()
+    {
       $this->records = Execution::orderBy('created_at','DESC')->paginate(5);
       $this->users = plan::get(['content_id','content','user_id',]);
       $this->user = $this->users->toArray();
@@ -64,7 +65,8 @@
       return $this->records;
     }
 
-    public function reply_record($progress_id){
+    public function reply_record($progress_id)
+    {
       // コンテンツ情報の取得
       $this->records = Execution::find($progress_id);
       $this->plans = plan::where('content_id',$this->records->content_id)->get();
