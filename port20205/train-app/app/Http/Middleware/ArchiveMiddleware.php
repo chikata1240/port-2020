@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class PlanMiddleware
+class ArchiveMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,8 +15,8 @@ class PlanMiddleware
      */
     public function handle($request, Closure $next)
     {
-      $day = $request->year . "-" . $request->month . "-" . $request->day;
-      $request->merge(['book_limit'=> $day]);
+      $day = $request->year . "-" . $request->month . "-" . $request->days;
+      $request->merge(['day'=> $day]);
       return $next($request);
     }
 }

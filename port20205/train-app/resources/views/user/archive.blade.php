@@ -48,24 +48,40 @@
         </div>
       {{-- フォーム --}}
         <div class="archive_content_title_parts">
-          <form action="/archive" method="POST" >
+          @foreach ($plan as $plan_item)
+          <form action='/archive_{{$plan_item["type"]}}' method="POST" >
             @csrf
             <input type="hidden" name="content_id" value="{{$content_id}}">
             <p>1.When?</p>
-            <input id="year" type="text" name="year">
-            <label for="year">年</label>
-            <input id="month" type="text" name="month">
-            <label for="month">月</label>
-            <input id="day" type="text" name="day">
-            <label for="day">日</label>
+            <input id="year" type="text" name="year" class="input_text" value="{{old('year')}}">
+            <label for="year" class="input_day">年</label>
+            <input id="month" type="text" name="month" class="input_text"  value="{{old('month')}}">
+            <label for="month" class="input_day">月</label>
+            <input id="day" type="text" name="days" class="input_text"  value="{{old('days')}}">
+            <label for="day" class="input_day">日</label>
+            @error('day')
+              <span>{{$message}}</span>
+            @enderror
             <p>2.How is your progress?</p>
-            <input type="text" name="progress">
+            @if ($plan_item['type'] == 'book')
+              <input type="text" name="progress" id="progress"  value="{{old('progress')}}">
+              <label for="progress">ページ</label>
+            @else
+              <input type="text" name="progress"  value="{{old('progress')}}">
+            @endif
+            @error('progress')
+              <span>{{$message}}</span>
+            @enderror
             <p>3.Memo</p>
-            <input type="textarea" name="memo">
+            <input type="textarea" name="memo" value="{{old('memo')}}">
+            @error('memo')
+              <span>{{$message}}</span>
+            @enderror
             <div class="content_submit">
               <input class="content_submit_button" type="submit" value="">
             </div>
           </form>
+          @endforeach
         </div>
       </div>
     </div>

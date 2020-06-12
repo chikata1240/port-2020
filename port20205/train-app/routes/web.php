@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\PlanMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,27 +16,33 @@ use App\Http\Middleware\PlanMiddleware;
 // Route::get('/', function () {
 //     return view('top.welcome');
 // });
+Route::get('/test', 'HomeController@test');
+
+// トップページ
 Route::get('/', function () {
     return view('top.toppage');
 });
-
-Route::get('/test', 'HomeController@test');
-
+// メインページ
 Route::get('/home', 'HomeController@main')->name('home');
-
-// Route::get('/main', 'HomeController@main');
+// リプライページ
 Route::get('/reply', 'HomeController@reply');
-Route::post('/reply', 'HomeController@reply');
+Route::post('/reply_post', 'HomeController@reply_post');
 Route::get('/reply_delete', 'HomeController@reply_delete');
+// ユーザーページ
 Route::get('/user', 'HomeController@user');
+// 計画確認ページ
 Route::get('/details', 'HomeController@details');
 Route::get('/details_destroy', 'HomeController@details_destroy');
+// 計画入力ページ
 Route::get('/input', 'HomeController@input_get')->name('user.input');
 Route::post('/input_book', 'HomeController@input_book')->middleware('plan');
 Route::post('/input_training', 'HomeController@input_training');
-Route::get('/archive_delete', 'HomeController@archive_delete');
+// 実行入力ページ
 Route::get('/archive', 'HomeController@archive_get');
-Route::post('/archive', 'HomeController@archive_post');
+Route::get('/archive_delete', 'HomeController@archive_delete');
+Route::post('/archive_training', 'HomeController@archive_training')->middleware('archive');
+Route::post('/archive_book', 'HomeController@archive_book')->middleware('archive');
+// 画像登録ページ
 Route::get('/user_edit', 'HomeController@user_edit_get');
 Route::post('/user_edit', 'HomeController@user_edit_post');
 

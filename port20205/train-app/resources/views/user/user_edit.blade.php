@@ -45,8 +45,11 @@
             {{ csrf_field() }}
             <label for="file_name">
               ファイルを選択
-              <input type="file" name="file_name" id="file_name"> 
+              <input type="file" name="file_name" id="file_name" value="{{old('file_name')}}"> 
             </label>
+            @error('file_name')
+              <span>{{$message}}</span>
+            @enderror
             <div class="content_submit">
               <input class="content_submit_button" type="submit" value="">
             </div>

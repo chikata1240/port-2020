@@ -30,19 +30,20 @@
       return Plan::where('user_id',Auth::id());
     }
 
-    public function contents(){
+    public function contents()
+    {
       $this->plans = $this->plans();
       $this->contents = $this->plans->get();
       return $this->contents;
     }
 
-    public function limit(){
+    public function limit()
+    {
       $this->plans = $this->plans();
       $this->contents =  $this->plans->paginate(9);
-      $this->today = new Carbon();
       foreach($this->contents as $content){
         if($content['type'] == 'book'){
-          $this->diff[] = $this->today->diffInDays($content->limit);
+          $this->diff[] = Carbon::today()->diffInDays($content->limit);
         }
       }
       $this->plan_counts = 0;
@@ -55,13 +56,15 @@
       return $this->contents;
     }
 
-    public function select_content($id){
+    public function select_content($id)
+    {
       $this->plans = $this->plans();
       $this->contents =  $this->plans->where('content_id',$id)->get();
       return $this->contents;
     }
 
-    public function max_page($id){
+    public function max_page($id)
+    {
       $this->plans = $this->plans();
       $this->contents =  $this->plans->where('content_id',$id)->get(['rule']);
       $this->content = $this->contents->toArray();
@@ -69,11 +72,17 @@
       return $this->max_page;
     }
 
-    public function type(){
+    public function type($content_id)
+    {
       $this->plans = $this->plans();
-      $this->contents = $this->plans->get();
-      $this->content = $this->contents->toArray();
+      $this->content = $this->plans->where('content_id',$content_id)->get()->toArray();
       $this->type = $this->content[0]['type'];
       return $this->type;
+    }
+
+    public function plan_record($content_id)
+    {
+      $this->plans = $this->plans()->where('content_id',$content_id)->get('type')->toArray();
+      return $this->plans;
     }
   }

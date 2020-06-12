@@ -40,8 +40,8 @@
             @csrf
             <input type="hidden" name="type" value="book">
             <p>1.What is the title?</p>
-            <input type="text" name="content" value="{{old('content')}}">
-            @error('content')
+            <input type="text" name="book_content" value="{{old('book_content')}}">
+            @error('book_content')
               <span>{{$message}}</span>
             @enderror
             <p>2.How long is the time limit?</p>
@@ -51,12 +51,12 @@
             <label for="month">月</label>
             <input id="day" type="text" name="day" placeholder="XX" value="{{old('day')}}">
             <label for="day">日</label>
-            @error('limit')
+            @error('book_limit')
               <span>{{$message}}</span>
             @enderror
             <p>3.How many pages?</p>
-            <input type="text" name="rule" value="{{old('rule')}}">
-            @error('rule')
+            <input type="text" name="book_rule" value="{{old('book_rule')}}">
+            @error('book_rule')
               <span>{{$message}}</span>
             @enderror
             <div class="content_submit">
@@ -71,18 +71,18 @@
             @csrf
             <input type="hidden" name="type" value="training">
             <p>1.What are you doing?</p>
-            <input type="text" name="content">
-            @error('content')
+            <input type="text" name="training_content" value="{{old('training_content')}}">
+            @error('training_content')
               <span>{{$message}}</span>
             @enderror
             <p>2.What is your goal?</p>
-            <input type="text" name="limit">
-            @error('limit')
+            <input type="text" name="training_limit" value="{{old('training_limit')}}">
+            @error('training_limit')
               <span>{{$message}}</span>
             @enderror
             <p>3.Let's decide the rules!</p>
-            <input type="textarea" name="rule">
-            @error('rule')
+            <input type="textarea" name="training_rule" value="{{old('training_rule')}}">
+            @error('training_rule')
               <span>{{$message}}</span>
             @enderror
             <div class="content_submit">

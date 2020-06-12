@@ -46,9 +46,9 @@
     }
 
     public function archives_create($request){
-      $this->set_day = $request->year . '-' . $request->month . '-' . $request->day;
+      // 登録
       $this->reply_create = Execution::create([
-        'day' => $this->set_day, 
+        'day' => $request->day, 
         'progress' => $request->progress, 
         'memo' => $request->memo,
         'content_id' => $request->content_id,

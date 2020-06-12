@@ -34,7 +34,6 @@
       {{-- 繰り返しforeach --}}
       {{-- コンテンツ本体 --}}
       <div class="main_content_title">
-        {{-- @foreach ($reply_records as $record_items) --}}
           {{-- ヘッダー --}}
           <div class="main_content_title_header">
             <div class="main_content_title_header_day">
@@ -59,16 +58,15 @@
             </div>
             {{-- フォーム --}}
             <div class="reply_content_form">
-              <form action="/reply?id={{$reply_records->progress_id}}" method="POST">
+              <form action="/reply_post?id={{$reply_records->progress_id}}" method="POST">
                 @csrf
                 <input type="hidden" name="progress_id" value="{{$reply_records->progress_id}}">
-                <input type="hidden" name="user_id" value="{{$reply_records->user_id}}">
+                <input type="hidden" name="user_id" value="{{$auth_id}}">
                 <input class="reply_form_text" type="text" name="comment">
                 <input class="reply_form_submit" type="submit">
               </form>
             </div>
           </div>
-          {{-- @endforeach --}}
 
           <div>
             {{-- 繰り返し --}}

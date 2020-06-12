@@ -124,26 +124,38 @@ body .user_main .user_contents .archive_content .archive_content_title_parts > f
   padding-top: 15px;
 }
 
-body .user_main .user_contents .archive_content .archive_content_title_parts > form #year {
+body .user_main .user_contents .archive_content .archive_content_title_parts > form .input_text {
   width: 50px;
   height: 30px;
 }
 
-body .user_main .user_contents .archive_content .archive_content_title_parts > form #month {
-  width: 50px;
-  height: 30px;
+body .user_main .user_contents .archive_content .archive_content_title_parts > form #month, body .user_main .user_contents .archive_content .archive_content_title_parts > form #day {
+  margin-left: 5px;
 }
 
-body .user_main .user_contents .archive_content .archive_content_title_parts > form #day {
-  width: 50px;
-  height: 30px;
+body .user_main .user_contents .archive_content .archive_content_title_parts > form > span {
+  display: inline-block;
+  color: red;
+  font-size: 1rem;
+  width: 100%;
+  padding: 5px 0 0 15px;
+}
+
+body .user_main .user_contents .archive_content .archive_content_title_parts > form .input_day {
+  width: 20px;
 }
 
 body .user_main .user_contents .archive_content .archive_content_title_parts > form > label {
+  vertical-align: bottom;
   font-size: 1.5rem;
-  width: 50px;
+  line-height: 30px;
   height: 30px;
+  margin: 0;
   padding-left: 3px;
+}
+
+body .user_main .user_contents .archive_content .archive_content_title_parts > form #progress {
+  width: 200px;
 }
 
 body .user_main .user_contents .archive_content .archive_content_title_parts > form > input {

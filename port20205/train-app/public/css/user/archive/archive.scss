@@ -56,23 +56,33 @@ body .user_main .user_contents{
           margin-bottom: 5px;
           padding-top: 15px;
         }
-        #year{
+        .input_text{
           width: 50px;
           height: 30px;
         }
-        #month{
-          width: 50px;
-          height: 30px;
+        #month,#day{
+          margin-left: 5px;
         }
-        #day{
-          width: 50px;
-          height: 30px;
+        > span{
+          display: inline-block;
+          color: red;
+          font-size: 1rem;
+          width: 100%;
+          padding: 5px 0 0 15px;
+        }
+        .input_day{
+          width: 20px;
         }
         > label{
+          vertical-align: bottom;
           font-size: 1.5rem;
-          width: 50px;
+          line-height: 30px;
           height: 30px;
+          margin: 0;
           padding-left: 3px;
+        }
+        #progress{
+          width: 200px;
         }
         > input{
           width:320px;
