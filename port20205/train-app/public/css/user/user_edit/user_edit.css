@@ -1,5 +1,5 @@
 html, body {
-  background-color: #fff;
+  background-color: #eee;
   color: #636b6f;
   position: relative;
   font-family: 'Nunito', sans-serif;
@@ -63,7 +63,6 @@ body .user_main .user_information .composer_box .sub_link_box:nth-child(3) .nav 
 }
 
 body .user_main .user_contents {
-  background-color: #ccc;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 900px;
@@ -72,9 +71,27 @@ body .user_main .user_contents {
 }
 
 body .user_main .user_contents .user_edit_content_title_header {
-  background-color: #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #636b6f;
   width: 100%;
   height: 60px;
+}
+
+body .user_main .user_contents .user_edit_content_title_header .user_edit_content_title_header_line_l {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-left: 20px solid #f3bf13;
+  height: 60px;
+}
+
+body .user_main .user_contents .user_edit_content_title_header .user_edit_content_title_header_line_s {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-left: 3px solid #f3bf13;
+  height: 60px;
+  margin-left: 3px;
 }
 
 body .user_main .user_contents .user_edit_content_title_parts {
@@ -86,7 +103,7 @@ body .user_main .user_contents .user_edit_content_title_parts {
           justify-content: space-evenly;
   width: 95%;
   height: 250px;
-  margin: auto;
+  margin: 50px auto;
 }
 
 body .user_main .user_contents .user_edit_content_title_parts .user_edit_content_title_parts_image {
@@ -99,18 +116,20 @@ body .user_main .user_contents .user_edit_content_title_parts .user_edit_content
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #999;
+  background-color: #fff;
+  -webkit-box-shadow: 15px 15px 0 0 #E6E3C5;
+          box-shadow: 15px 15px 0 0 #E6E3C5;
   width: 250px;
   height: 100%;
 }
 
 body .user_main .user_contents .user_edit_content_title_parts .user_edit_content_title_parts_image > img {
+  border: solid #000 5px;
   width: 128px;
   height: 128px;
 }
 
 body .user_main .user_contents .user_edit_content_title_parts .user_edit_content_title_parts_form {
-  background-color: #999;
   width: 500px;
   height: 100%;
 }
@@ -121,13 +140,18 @@ body .user_main .user_contents .user_edit_content_title_parts .user_edit_content
 
 body .user_main .user_contents .user_edit_content_title_parts .user_edit_content_title_parts_form form > label {
   display: block;
-  background: #333;
+  background: #636b6f;
+  border-bottom: 10px solid #333;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.12), 0 3px 4px 0 rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.12), 0 3px 4px 0 rgba(0, 0, 0, 0.22);
   color: #fff;
   cursor: pointer;
   line-height: 50px;
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
   width: 200px;
-  height: 50px;
+  height: 60px;
   margin: 50px auto 0;
 }
 
@@ -150,9 +174,9 @@ body .user_main .user_contents .user_edit_content_title_parts .user_edit_content
 
 body .user_main .user_contents .user_edit_content_title_parts .user_edit_content_title_parts_form form .content_submit .content_submit_button {
   border-style: none;
-  border-bottom: 10px solid #ccc;
+  border-bottom: 10px solid #333;
   border-radius: 15px;
-  background-color: #fff;
+  background-color: #636b6f;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.12), 0 3px 4px 0 rgba(0, 0, 0, 0.22);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.12), 0 3px 4px 0 rgba(0, 0, 0, 0.22);
   width: 100%;
@@ -161,6 +185,7 @@ body .user_main .user_contents .user_edit_content_title_parts .user_edit_content
 
 body .user_main .user_contents .user_edit_content_title_parts .user_edit_content_title_parts_form form .content_submit .content_submit_button:hover {
   cursor: pointer;
+  opacity: 0.9;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
@@ -168,6 +193,6 @@ body .user_main .user_contents .user_edit_content_title_parts .user_edit_content
 body .user_main .user_contents .user_edit_content_title_parts .user_edit_content_title_parts_form form .content_submit .content_submit_button:active {
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
-  border-bottom: 5px solid #ccc;
+  border-bottom: 2px solid #ccc;
 }
 /*# sourceMappingURL=user_edit.css.map */

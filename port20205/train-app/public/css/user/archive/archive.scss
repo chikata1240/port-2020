@@ -6,31 +6,30 @@ body .user_main .user_information .composer_box .sub_link_box{
     display: block;
     pointer-events: none;
     .sub_link{
-      background-color: #fff;
+      background-color: $white-color;
     }
   }
 }
 // コンテンツBOX
 body .user_main .user_contents{
-  background-color: #ccc;
   box-sizing: border-box;
   width: 900px;
   margin-left: 100px;
   margin-bottom: 100px;
   .archive_content_title_header{
-    background-color: #666;
+    background-color: $bg-main-color;
     width: 100%;
     height: 60px;
   }
   .archive_content{
+
+    background-color: $bg-white-color;
     display: flex;
     justify-content: center;
-    background-color: #999;
     width: 100%;
     height: 450px;
     .archive_message{
       position: relative;
-      background-color: #999;
       width: 50%;
       height: 450px;
       > div{
@@ -42,6 +41,24 @@ body .user_main .user_contents{
         font-size: 3.5rem;
         line-height: 0.8;
         width: 100%;
+        >p{
+          position: relative;
+          .archive_border_line{
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            background-color: $point-color;
+            opacity: .5;
+            height: 10px;
+          }
+          &:nth-child(1) .archive_border_line{
+            width: 180px;
+          }
+          &:nth-child(2) .archive_border_line{
+            width: 360px;
+          }
+        }
       }
     }
     
@@ -60,6 +77,9 @@ body .user_main .user_contents{
           width: 50px;
           height: 30px;
         }
+        .input_day{
+          width: 20px;
+        }
         #month,#day{
           margin-left: 5px;
         }
@@ -70,8 +90,12 @@ body .user_main .user_contents{
           width: 100%;
           padding: 5px 0 0 15px;
         }
-        .input_day{
-          width: 20px;
+        #progress{
+          width: 200px;
+        }
+        #memo{
+          width: 320px;
+          height: 80px;
         }
         > label{
           vertical-align: bottom;
@@ -81,22 +105,20 @@ body .user_main .user_contents{
           margin: 0;
           padding-left: 3px;
         }
-        #progress{
-          width: 200px;
-        }
         > input{
           width:320px;
           height: 30px;
           margin-left: 15px;
         }
         .content_submit{
+          box-sizing: border-box;
           width: 350px;
-          margin: 50px auto;
+          margin: 30px auto 20px;
           .content_submit_button{
             border-style: none;
-            border-bottom: 10px solid #ccc;
+            background-color: $main-color;
+            border-bottom: 10px solid #333;
             border-radius: 15px;
-            background-color: #fff;
             box-shadow: 0 0 5px 0 rgba(0,0,0,.12), 0 3px 4px 0 rgba(0,0,0,.22);
             width: 100%;
             height: 65px;

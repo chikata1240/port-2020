@@ -19,6 +19,7 @@
     protected $max_page;
     protected $plan_counts;
     protected $check_arrival;
+    protected $limit;
 
     // メソッド
     public function plans()
@@ -39,7 +40,12 @@
       $this->contents =  $this->plans->paginate(9);
       foreach($this->contents as $content){
         if($content['type'] == 'book'){
-          $this->diff[] = Carbon::today()->diffInDays($content->limit);
+          $this->limit = new Carbon($content->limit);
+          if($this->limit->isPast()){
+            $this->diff[] = 'Time Up!';
+          }else{
+            $this->diff[] = Carbon::today()->diffInDays($this->limit);
+          }
         }
       }
       $this->plan_counts = 0;

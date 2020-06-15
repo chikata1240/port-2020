@@ -36,6 +36,8 @@
       <div class="main_content_title">
           {{-- ヘッダー --}}
           <div class="main_content_title_header">
+            <div class="main_content_title_header_line_w"></div>
+            <div class="main_content_title_header_line_y"></div>
             <div class="main_content_title_header_day">
               {{$reply_records->created_at->format('Y年m月d日 H時i分')}}
             </div>

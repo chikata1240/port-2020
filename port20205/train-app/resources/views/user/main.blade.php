@@ -37,6 +37,7 @@
         <div class="main_content_title">
           {{-- コンテンツヘッダー --}}
           <div class="main_content_title_header">
+            <div class="main_content_title_header_line"></div>
             <div class="main_content_title_header_day">
               {{$record_items->created_at->format('Y年m月d日 H時i分')}}
             </div>
@@ -65,9 +66,11 @@
       @endforeach
 
       {{-- ページネーション  --}}
+      @if (count($records) >= 5)
       <div class="detail_pagenation">
         {!! $records->links() !!}
       </div>
+      @endif
     </div>
   </div>
 @endsection

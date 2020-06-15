@@ -1,5 +1,5 @@
 html, body {
-  background-color: #fff;
+  background-color: #eee;
   color: #636b6f;
   position: relative;
   font-family: 'Nunito', sans-serif;
@@ -63,11 +63,10 @@ body .user_main .user_information .composer_box .sub_link_box:nth-child(1) .nav 
 }
 
 body .user_main .user_contents {
-  background-color: #ccc;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 900px;
-  margin-left: 50px;
+  margin-left: 100px;
   margin-bottom: 100px;
 }
 
@@ -77,18 +76,26 @@ body .user_main .user_contents .main_content_title {
 }
 
 body .user_main .user_contents .main_content_title .main_content_title_header {
-  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #636b6f;
   width: 100%;
   height: 50px;
 }
 
+body .user_main .user_contents .main_content_title .main_content_title_header .main_content_title_header_line {
+  margin-left: 30px;
+  border-left: 2px solid #f3bf13;
+}
+
 body .user_main .user_contents .main_content_title .main_content_title_header .main_content_title_header_day {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-left: 2px solid #fff;
+  border-left: 3px solid #fff;
+  color: #fff;
   line-height: 50px;
   font-size: 1.7rem;
-  margin-left: 30px;
   padding-left: 15px;
 }
 
@@ -102,7 +109,7 @@ body .user_main .user_contents .main_content_title .detail_content_title_parts_b
 }
 
 body .user_main .user_contents .main_content_title .detail_content_title_parts_box > a .detail_content_title_parts {
-  background-color: #666;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,18 +129,17 @@ body .user_main .user_contents .main_content_title .detail_content_title_parts_b
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #888;
   width: 20%;
 }
 
 body .user_main .user_contents .main_content_title .detail_content_title_parts_box > a .detail_content_title_parts .detail_content_title_parts_image > img {
+  border: solid #000 5px;
   width: 80%;
 }
 
 body .user_main .user_contents .main_content_title .detail_content_title_parts_box > a .detail_content_title_parts .detail_content_title_parts_text {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #999;
   width: 80%;
   padding: 0 30px;
 }
@@ -147,5 +153,37 @@ body .user_main .user_contents .main_content_title .detail_content_title_parts_b
           box-sizing: border-box;
   font-size: 1.5rem;
   padding-left: 15px;
+}
+
+body .user_main .user_contents .detail_pagenation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #636b6f;
+  border-top: 2px solid #f3bf13;
+  width: 100%;
+  height: 60px;
+}
+
+body .user_main .user_contents .detail_pagenation > nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .user_main .user_contents .detail_pagenation > nav .pagination {
+  margin: 0 !important;
 }
 /*# sourceMappingURL=main.css.map */

@@ -2,7 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "mixin.scss"
+        "mixin.scss",
+        "../color/color.scss"
     ],
     "names": [],
     "file": "mixin.css"

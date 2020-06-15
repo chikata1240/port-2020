@@ -6,7 +6,7 @@ body .user_main .user_information .composer_box .sub_link_box{
     display: block;
     pointer-events: none;
     .sub_link{
-      background-color: #fff;
+      background-color: $bg-white-color;
     }
   }
 }
@@ -15,27 +15,51 @@ body .user_main .user_contents{
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  background-color: #ccc;
   box-sizing: border-box;
   width: 900px;
   margin-left: 100px;
   margin-bottom: 50px;
   .user_content_title{
-    background-color: #999;
+    box-shadow: 15px 15px 0 0 $point-second-color;
+    border-radius: 0 0 10px 10px;
+    background-color: $bg-white-color;
     width: 250px;
+    height: 310px;
     margin-left: 37px;
     margin-bottom: 50px;
     .user_content_title_header{
-      background-color: #777;
+      background-color: $bg-main-color;
       width: 100%;
       height: 60px;
+      .user_content_title_header_text_box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white-color;
+        font-size: 1.7rem;
+        height: 60px;
+        .user_content_title_header_text{
+          border: 1px solid $bd-white-color;
+          border-radius: 50%;
+          padding: 0 20px;
+        }
+      }
+      .user_content_title_header_line_w{
+        border-bottom: 3px solid $bd-white-color;
+        height: 20px;
+      }
+      .user_content_title_header_line_y{
+        border-bottom: 2px solid $point-color;
+        height: 20px;
+      }
     }
     > a{
       text-decoration: none;
-      color: #000;
+      color: $black-color;
       .user_content_title_parts{
         box-sizing: border-box;
         width: 80%;
+        height: 80%;
         margin: auto;
         padding: 30px 0;
         .user_content_title_parts_title{
@@ -46,6 +70,23 @@ body .user_main .user_contents{
           padding-left: 20px;
           padding-bottom: 5px;
         }
+      }
+    }
+  }
+  .detail_pagenation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-main-color;
+    border-top: 2px solid $point-color;
+    width: 100%;
+    height: 60px;
+    > nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .pagination{
+        margin: 0 !important;
       }
     }
   }

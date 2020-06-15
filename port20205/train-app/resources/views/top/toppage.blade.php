@@ -27,7 +27,7 @@
     <div class="title">
       Train Train
     </div>
-    <img src="{{asset('/img/train_image1.png')}}" width="450px" height="100px" alt="線路のイメージ">
+    <img src="{{asset('/img/train_image1.png')}}" class="top_image" alt="線路のイメージ">
   </div>
 </div>
 @endsection

@@ -31,7 +31,11 @@
 
     {{-- コンテンツ --}}
     <div class="user_contents">
-      <div class="user_edit_content_title_header"></div>
+      <div class="user_edit_content_title_header">
+        <div class="user_edit_content_title_header_line_l"></div>
+        <div class="user_edit_content_title_header_line_s"></div>
+        <div class="user_edit_content_title_header_line_s"></div>
+      </div>
       <div class="user_edit_content_title_parts">
         {{-- 画像 --}}
         <div class="user_edit_content_title_parts_image">

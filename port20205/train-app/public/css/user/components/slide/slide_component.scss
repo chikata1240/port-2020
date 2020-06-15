@@ -1,5 +1,8 @@
+@import "../../../mixin/mixin.scss";
+@import "../../../color/color.scss";
+
 html body .user_main .user_information .drop_down_list_box{
-  background-color: #888;
+  background-color: $bg-main-color;
   width: 100%;
   height: 40px;
   .composer_button {
@@ -18,8 +21,9 @@ html body .user_main .user_information .drop_down_list_box{
       width: 100%;
       height: 4px;
       border-radius: 4px;
-      background: #fff;
+      background: $bg-white-color;
       transition: all .3s;
+      
       &:nth-child(1) {
         top: 20px;
         transform: translateX(-6px) rotate(45deg);
@@ -31,7 +35,7 @@ html body .user_main .user_information .drop_down_list_box{
     }
     &.is-active {
       .bdr {
-        background: #fff;
+        background: $bg-white-color;
         &:nth-child(1) {
           transform: translateX(-6px) rotate(-45deg);
         }
@@ -49,18 +53,15 @@ html body .user_main .user_information .drop_down_list_box{
     opacity: 0;
     transform: translateY(-10px);
   }
-
   50% {
     visibility: visible;
     transform: translateY(-5px);
     opacity: .3;
   }
-
   70%{
     visibility: visible;
     opacity: .7;
   }
-
   100% {
     visibility: visible;
     opacity: 1;
@@ -72,7 +73,6 @@ html body .user_main .user_information .drop_down_list_box{
     visibility: visible;
     opacity: 1;
   }
-
   50% {
     visibility: visible;
     opacity: .6;
@@ -82,7 +82,6 @@ html body .user_main .user_information .drop_down_list_box{
     opacity: .3;
     transform: translateY(-4px);
   }
-
   100% {
     visibility: hidden;
     opacity: 0;

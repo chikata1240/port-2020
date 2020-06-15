@@ -37,7 +37,14 @@
         <div class="user_content_title">
           <div class="user_content_title_header">
             @if ($content->arrival == 1)
-            Arrival!
+            <div class="user_content_title_header_text_box">
+              <div class="user_content_title_header_text">
+                Arrival!
+              </div>
+            </div>
+            @else
+            <div class="user_content_title_header_line_w"></div>
+            <div class="user_content_title_header_line_y"></div>
             @endif
           </div>
           <a href="/details?id={{$content->content_id}}">
@@ -47,7 +54,11 @@
               <div class="user_content_title_parts_title">Time Limit</div>
               <div class="user_content_title_parts_record">{{$content->limit}}</div>
               @if ($content->arrival == 0)
-              <div class="user_content_title_parts_record">{{$content->diff}}day</div>
+                @if (is_numeric($content->diff))
+                <div class="user_content_title_parts_record">{{$content->diff}}day</div>
+                @else
+                <div class="user_content_title_parts_record">{{$content->diff}}</div>
+                @endif
               @endif
             </div>
           </a>
@@ -56,7 +67,14 @@
         <div class="user_content_title">
           <div class="user_content_title_header">
             @if ($content->arrival == 1)
-            Arrival!
+            <div class="user_content_title_header_text_box">
+              <div class="user_content_title_header_text">
+                Arrival!
+              </div>
+            </div>
+            @else
+            <div class="user_content_title_header_line_w"></div>
+            <div class="user_content_title_header_line_y"></div>
             @endif
           </div>
           <a href="/details?id={{$content->content_id}}">
@@ -71,8 +89,10 @@
       @endif
       @endforeach
       {{-- ページネーション  --}}
+      @if (count($contents) >= 9)
       <div class="detail_pagenation">
         {!! $contents->links() !!}
       </div>
+      @endif
     </div>
 @endsection

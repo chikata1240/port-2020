@@ -1,5 +1,5 @@
 html .user_information .user_information_box, body .user_information .user_information_box {
-  background-color: #ccc;
+  background-color: #fff;
   width: 100%;
 }
 
@@ -11,8 +11,10 @@ html .user_information .user_information_box > a, body .user_information .user_i
 html .user_information .user_information_box > a .user_information_link, body .user_information .user_information_box > a .user_information_link {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-shadow: 15px 55px 0 0 #E6E3C5;
+          box-shadow: 15px 55px 0 0 #E6E3C5;
   width: 100%;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
 html .user_information .user_information_box > a .user_information_link .user_image, body .user_information .user_information_box > a .user_information_link .user_image {
@@ -22,6 +24,8 @@ html .user_information .user_information_box > a .user_information_link .user_im
 }
 
 html .user_information .user_information_box > a .user_information_link .user_image > img, body .user_information .user_information_box > a .user_information_link .user_image > img {
+  border: solid #000 5px;
+  border-radius: 5px;
   width: 200px;
   height: 200px;
 }
@@ -43,6 +47,8 @@ html .user_information .user_information_box > a .user_information_link .user_na
 }
 
 html .user_information .user_information_box > a .user_information_link .user_name > div:nth-child(even), body .user_information .user_information_box > a .user_information_link .user_name > div:nth-child(even) {
-  padding-left: 30px;
+  width: 100px;
+  text-align: center;
+  margin-left: 30px;
 }
 /*# sourceMappingURL=user_information_component.css.map */

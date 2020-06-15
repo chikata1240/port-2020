@@ -42,8 +42,14 @@
       <div class="archive_content">
         <div class="archive_message">
           <div>
-            <p>Well done!!</p>
-            <p>Leave it in the archive!!<p>
+            <p>
+              Well done!!
+              <span class="archive_border_line"></span>
+            </p>
+            <p>
+              Leave it in the archive!!
+              <span class="archive_border_line"></span>
+            </p>
           </div>
         </div>
       {{-- フォーム --}}
@@ -64,7 +70,7 @@
             @enderror
             <p>2.How is your progress?</p>
             @if ($plan_item['type'] == 'book')
-              <input type="text" name="progress" id="progress"  value="{{old('progress')}}">
+              <input id="progress" type="text" name="progress" value="{{old('progress')}}">
               <label for="progress">ページ</label>
             @else
               <input type="text" name="progress"  value="{{old('progress')}}">
@@ -73,7 +79,7 @@
               <span>{{$message}}</span>
             @enderror
             <p>3.Memo</p>
-            <input type="textarea" name="memo" value="{{old('memo')}}">
+            <input id="memo" type="textarea" name="memo" value="{{old('memo')}}">
             @error('memo')
               <span>{{$message}}</span>
             @enderror

@@ -17,7 +17,7 @@ class CreateExecutionsTable extends Migration
             $table->increments('progress_id');
             $table->date('day');
             $table->text('progress');
-            $table->text('memo');
+            $table->text('memo')->nullable();
             $table->integer('content_id')->unsigned();
             $table->timestamps();
         });

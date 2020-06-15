@@ -39,7 +39,7 @@
       if($this->remaining_pages >= 100){
         $this->remaining_pages = 100;
       }
-      return $this->remaining_pages;
+      return round($this->remaining_pages,1);
     }
 
     public function archives($content_id){

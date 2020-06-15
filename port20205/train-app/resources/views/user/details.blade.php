@@ -54,30 +54,24 @@
                 <div class="detail_content_title_parts_title">Progress</div>
                 <div class="detail_content_title_parts_record">{{$remaining_pages['reed_page']}}/{{$remaining_pages['max_page']}}({{$remaining_pages['remaining_page']}}%)</div>
               </div>
-              @if ($check_arrival['arrival'] == 0)
-              <div class="detail_content_title_parts_archive">
-                <a href="/archive?id={{$content->content_id}}">
-                  <div class="detail_content_title_parts_archive_link">
-                    Archive
-                  </div>
-                </a>
+              <div class="detail_content_title_parts_button">
+                @if ($check_arrival['arrival'] == 0)
+                <div class="detail_content_title_parts_archive">
+                  <a href="/archive?id={{$content->content_id}}">
+                    <div class="detail_content_title_parts_archive_link">
+                      Archive
+                    </div>
+                  </a>
+                </div>
+                <div class="detail_content_title_parts_archive">
+                  <a href="/details_arrival?id={{$content->content_id}}">
+                    <div class="detail_content_title_parts_archive_link">
+                      Arrival
+                    </div>
+                  </a>
+                </div>
+                @endif
               </div>
-              <div class="detail_content_title_parts_archive">
-                <a href="/details_arrival?id={{$content->content_id}}">
-                  <div class="detail_content_title_parts_archive_link">
-                    Arrival
-                  </div>
-                </a>
-              </div>
-              @else
-              <div class="detail_content_title_parts_archive">
-                <a href="/details_release?id={{$content->content_id}}">
-                  <div class="detail_content_title_parts_archive_link">
-                    Release
-                  </div>
-                </a>
-              </div>
-              @endif
               {{-- content_delete --}}
               <div class="detail_content_delete_box">
                 <a href="/details_destroy?id={{$content->content_id}}">
@@ -98,30 +92,32 @@
                 <div class="detail_content_title_parts_title">Rules</div>
                 <div class="detail_content_title_parts_record">{{$content->rule}}</div>
               </div>
-              @if ($check_arrival['arrival'] == 0)
-              <div class="detail_content_title_parts_archive">
-                <a href="/archive?id={{$content->content_id}}">
-                  <div class="detail_content_title_parts_archive_link">
-                    Archive
-                  </div>
-                </a>
+              <div class="detail_content_title_parts_button">
+                @if ($check_arrival['arrival'] == 0)
+                <div class="detail_content_title_parts_archive">
+                  <a href="/archive?id={{$content->content_id}}">
+                    <div class="detail_content_title_parts_archive_link">
+                      Archive
+                    </div>
+                  </a>
+                </div>
+                <div class="detail_content_title_parts_archive">
+                  <a href="/details_arrival?id={{$content->content_id}}">
+                    <div class="detail_content_title_parts_archive_link">
+                      Arrival
+                    </div>
+                  </a>
+                </div>
+                @else
+                <div class="detail_content_title_parts_archive">
+                  <a href="/details_release?id={{$content->content_id}}">
+                    <div class="detail_content_title_parts_archive_link">
+                      Release
+                    </div>
+                  </a>
+                </div>
+                @endif
               </div>
-              <div class="detail_content_title_parts_archive">
-                <a href="/details_arrival?id={{$content->content_id}}">
-                  <div class="detail_content_title_parts_archive_link">
-                    Arrival
-                  </div>
-                </a>
-              </div>
-              @else
-              <div class="detail_content_title_parts_archive">
-                <a href="/details_release?id={{$content->content_id}}">
-                  <div class="detail_content_title_parts_archive_link">
-                    Release
-                  </div>
-                </a>
-              </div>
-              @endif
               {{-- content_delete --}}
               <div class="detail_content_delete_box">
                 <a href="/details_destroy?id={{$content->content_id}}">

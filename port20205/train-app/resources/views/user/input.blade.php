@@ -31,7 +31,11 @@
 
     {{-- コンテンツ --}}
     <div class="user_contents">
-      <div class="training_menu">Please choosing</div>
+      <div class="training_menu">
+        <div class="training_menu_text">
+          Please choosing
+        </div>
+      </div>
       <div class="training_contents">
         {{-- 読書 --}}
         <div class="training_content">
@@ -55,7 +59,8 @@
               <span>{{$message}}</span>
             @enderror
             <p>3.How many pages?</p>
-            <input type="text" name="book_rule" value="{{old('book_rule')}}">
+            <input id="pages" type="text" name="book_rule" value="{{old('book_rule')}}">
+            <label for="pages">ページ</label>
             @error('book_rule')
               <span>{{$message}}</span>
             @enderror
@@ -81,7 +86,7 @@
               <span>{{$message}}</span>
             @enderror
             <p>3.Let's decide the rules!</p>
-            <input type="textarea" name="training_rule" value="{{old('training_rule')}}">
+            <input id="training_rule" type="textarea" name="training_rule" value="{{old('training_rule')}}">
             @error('training_rule')
               <span>{{$message}}</span>
             @enderror

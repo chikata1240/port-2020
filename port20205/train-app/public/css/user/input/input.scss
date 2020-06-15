@@ -6,59 +6,83 @@ body .user_main .user_information .composer_box .sub_link_box{
     display: block;
     pointer-events: none;
     .sub_link{
-      background-color: #fff;
+      background-color: $bg-white-color;
     }
   }
 }
 // コンテンツBOX
 body .user_main .user_contents{
-  background-color: #ccc;
+  color: $white-color;
   box-sizing: border-box;
   width: 900px;
   margin-left: 100px;
   margin-bottom: 100px;
   .training_menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #999;
+    background-color: $bg-main-color;
     font-size: 3rem;
     width: 100%;
     height: 70px;
     margin-bottom: 40px;
+    .training_menu_text{
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      border-left: 5px solid #fff;
+      height: 70px;
+      margin-left: 30px;
+      padding-left: 20px;
+    }
   }
   .training_contents{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     .training_content{
-      background-color: #999;
+      background-color: $bg-white-color;
+      box-shadow: 15px 15px 0 0 $point-second-color;
       width: 400px;
       margin-bottom: 70px;
       .training_content_header{
+        background-color: $bg-main-color;
+        border-bottom: 3px solid $point-color;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 2.5rem;
-        border-bottom: 2px solid #000;
         width: 100%;
         height: 50px;
-        margin-bottom: 30px;
       }
       form{
+        color: $main-color;
         width: 90%;
         margin: auto;
         > p{
           font-size: 1.7rem;
           margin: 8px 0;
+          margin-top: 20px;
         }
         > input{
+          font-size: 1.3rem;
           width:320px;
           height: 30px;
           margin-left: 15px;
         }
+        > label{
+          font-size: 1.3rem;
+          margin: 0;
+          padding-left: 3px;
+        }
+        #pages{
+          width: 100px;
+        }
         #year,#month,#day{
           text-align: right;
           width: 50px;
+        }
+        #month,#day{
+          margin-left: 5px;
+        }
+        #training_rule{
+          height: 60px;
         }
         > span{
           display: inline-block;
@@ -71,11 +95,12 @@ body .user_main .user_contents{
           width: 90%;
           margin: 30px auto;
           .content_submit_button{
+            background-color: $bg-main-color;
             border-style: none;
-            border-bottom: 10px solid #ccc;
+            border-bottom: 10px solid #333;
             border-radius: 15px;
-            background-color: #fff;
-            box-shadow: 0 0 5px 0 rgba(0,0,0,.12), 0 3px 4px 0 rgba(0,0,0,.22);
+            outline: none;
+            box-shadow: 3px 5px 5px 0 rgba(0,0,0,.2);
             width: 100%;
             height: 65px;
             @include sendhover();

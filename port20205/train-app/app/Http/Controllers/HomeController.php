@@ -90,9 +90,8 @@ class HomeController extends Controller
     // ユーザー情報取得
     $user_registration_information = app('App\Myclasses\UserRegistration');
     list($user_information,$arrival) = $user_registration_information->file_name();
-    // コンテンツの取得
+    // コンテンツ・残り日数の取得
     $plan = app('App\Myclasses\UserPlan');
-    // 残り日数の取得
     $contents = $plan->limit();
     return view('user.user',compact('user_information','arrival','contents'));
   }

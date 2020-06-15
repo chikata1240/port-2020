@@ -4,20 +4,23 @@
 html, body {
   .user_information{
     .user_information_box{
-      background-color: #ccc;
+      background-color: $bg-white-color;
       width: 100%;
       > a{
         text-decoration: none;
-        color: #000;
+        color: $black-color;
         .user_information_link{
           box-sizing: border-box;
+          box-shadow: 15px 55px 0 0 $point-second-color;
           width: 100%;
-          padding-top: 20px;
+          padding: 20px 0;
           .user_image{
             width: 200px;
             height: 200px;
             margin: auto ;
             > img{
+              border: solid $bd-black-color 5px;
+              border-radius: 5px;
               width: 200px;
               height: 200px;
             }
@@ -34,7 +37,9 @@ html, body {
                 padding-left: 10px;
               }
               &:nth-child(even){
-                padding-left: 30px;
+                width: 100px;
+                text-align: center;
+                margin-left: 30px;
               }
             }
           }

@@ -1,58 +1,60 @@
 @import "../master/master.scss";
 
 html, body {
-    // ヘッダー
-    header{
-        @media screen and (max-width:576px)
-        {
-            .top-right {
-                @include nav(15px);
-                > a{
-                    @include hover();
-                }
-            }
+  // ヘッダー
+  header{
+    @media screen and (max-width:576px)
+    {
+      .top-right {
+        @include nav(15px);
+        > a{
+          @include hover();
         }
-        @media screen and (min-width:576px)
-        {
-            .top-right {
-                @include nav(50px);
-                > a{
-                    @include hover();
-                }
-            }
-        }
-        @media screen and (min-width:992px)
-        {
-            .top-right {
-                @include nav;
-                > a{
-                    @include hover();
-                }
-            }
-        }
-        @media screen and (min-width:1200px)
-        {
-            .top-right {
-                @include nav;
-                > a{
-                    @include hover();
-                }
-            }
-        }
+      }
     }
-    // コンテンツ
-    .contents {
-        width: 100%;
-        .content_style {
-            text-align: center;
-            width: 500px;
-            height: 250px;
-            margin: auto;
-            padding-top: 250px;
-            .title {
-                font-family:'Damion','Nunito', sans-serif;
-                font-size: 84px;
-            }
+    @media screen and (min-width:576px)
+    {
+      .top-right {
+        @include nav(50px);
+        > a{
+          @include hover();
         }
+      }
     }
+    @media screen and (min-width:992px)
+    {
+      .top-right {
+        @include nav;
+        > a{
+          @include hover();
+        }
+      }
+    }
+    @media screen and (min-width:1200px)
+    {
+      .top-right {
+        @include nav;
+        > a{
+          @include hover();
+        }
+      }
+    }
+  }
+  // コンテンツ
+  .contents {
+    width: 100%;
+    .content_style {
+      text-align: center;
+      width: 1100px;
+      margin: 100px auto;
+      .title {
+        font-family:'Damion','Nunito', sans-serif;
+        font-size: 150px;
+      }
+      .top_image{
+        width: 600px;
+        height: 150px;
+      }
+    }
+  }
 }

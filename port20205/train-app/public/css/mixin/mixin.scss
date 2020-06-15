@@ -1,3 +1,5 @@
+@import "../color/color.scss";
+
 @mixin nav($right:93px){
   position: absolute;
   z-index: 20;
@@ -7,17 +9,30 @@
 
 @mixin hover {
   &:hover{
-      color: $black-color;
+    color: $black-color;
+  }
+}
+
+@mixin bg-hover {
+  &:hover{
+    background-color: $bg-black-color;
+  }
+}
+
+@mixin hover_clear {
+  &:hover{
+    opacity: 0.5;
   }
 }
 
 @mixin sendhover {
   &:hover{
     cursor: pointer;
+    opacity: 0.9;
     transition: all 0.1s linear;
   }
   &:active{
     transform: translateY(4px);
-    border-bottom: 5px solid #ccc;
+    border-bottom: 2px solid $gray-color;
   }
 }
