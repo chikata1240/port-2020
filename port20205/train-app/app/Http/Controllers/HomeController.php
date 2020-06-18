@@ -33,10 +33,10 @@ class HomeController extends Controller
    *
    * @return \Illuminate\Contracts\Support\Renderable
    */
-  public function index()
-  {
-    return view('top.home');
-  }
+  // public function index()
+  // {
+  //   return view('top.home');
+  // }
 
   // main
   public function main()
@@ -170,7 +170,7 @@ class HomeController extends Controller
   }
 
   // input
-  public function input_get(Request $request)
+  public function input(Request $request)
   {
     // ユーザー情報取得
     $user_registration_information = app('App\Myclasses\UserRegistration');
@@ -197,7 +197,7 @@ class HomeController extends Controller
   }
 
   // archive
-  public function archive_get(Request $request)
+  public function archive(Request $request)
   {
     // コンテンツのid取得
     $content_id = $request->id;
@@ -211,13 +211,13 @@ class HomeController extends Controller
     return view('user.archive',compact('user_information','arrival','content_id','nav_content','plan'));
   }
 
-  // archive_trainin
-  public function archive_training(ArchiveTrainingRequest $request)
+  // reply_delete?id=
+  public function archive_delete(Request $request)
   {
     // コンテンツのid取得
     $content_id = $request->content_id;
-    $archives_creates = app('App\Myclasses\UserExecution');
-    $archives_creates->archives_create($request);
+    $archive_deletes = app('App\Myclasses\UserExecution');
+    $archive_deletes->archive_delete($request->id);
     return redirect('/details?id=' . $content_id);
   }
 
@@ -231,16 +231,15 @@ class HomeController extends Controller
     return redirect('/details?id=' . $content_id);
   }
 
-  // reply_delete?id=
-  public function archive_delete(Request $request)
+  // archive_trainin
+  public function archive_training(ArchiveTrainingRequest $request)
   {
     // コンテンツのid取得
     $content_id = $request->content_id;
-    $archive_deletes = app('App\Myclasses\UserExecution');
-    $archive_deletes->archive_delete($request->id);
+    $archives_creates = app('App\Myclasses\UserExecution');
+    $archives_creates->archives_create($request);
     return redirect('/details?id=' . $content_id);
   }
-
 
   // user_edit
   public function user_edit_get()

@@ -12,9 +12,9 @@ class Plan extends Model
         'content',
         'limit',
         'rule',
-        'user_id',
         'type',
         'arrival',
+        'user_id',
     ];
 
     public function executions(){

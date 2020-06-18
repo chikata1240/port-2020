@@ -36,14 +36,14 @@ Route::get('/details_destroy', 'HomeController@details_destroy');
 Route::get('/details_arrival', 'HomeController@details_arrival');
 Route::get('/details_release', 'HomeController@details_release');
 // 計画入力ページ
-Route::get('/input', 'HomeController@input_get')->name('user.input');
+Route::get('/input', 'HomeController@input')->name('user.input');
 Route::post('/input_book', 'HomeController@input_book')->middleware('plan');
 Route::post('/input_training', 'HomeController@input_training');
 // 実行入力ページ
-Route::get('/archive', 'HomeController@archive_get');
+Route::get('/archive', 'HomeController@archive');
 Route::get('/archive_delete', 'HomeController@archive_delete');
-Route::post('/archive_training', 'HomeController@archive_training')->middleware('archive');
 Route::post('/archive_book', 'HomeController@archive_book')->middleware('archive');
+Route::post('/archive_training', 'HomeController@archive_training')->middleware('archive');
 // 画像登録ページ
 Route::get('/user_edit', 'HomeController@user_edit_get');
 Route::post('/user_edit', 'HomeController@user_edit_post');
